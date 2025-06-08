@@ -8,7 +8,7 @@ body {
 
 body {
   color: var(--foreground);
-  background: #000;
+  background: #fff;
   font-family: var(--font-poppins);
 }
 

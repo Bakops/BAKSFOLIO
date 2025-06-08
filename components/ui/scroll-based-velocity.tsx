@@ -115,7 +115,7 @@ export function VelocityScroll({
       </ParallaxText>
       <ParallaxText
         baseVelocity={-default_velocity}
-        className={cn("text-[#FFF]", className)}
+        className={cn("text-[#000]", className)}
       >
         {text}
       </ParallaxText>

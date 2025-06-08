@@ -8,7 +8,7 @@ export function ScrollBasedVelocityDemo() {
         <VelocityScroll
           text="#Créativité"
           default_velocity={5}
-          className="font-display text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem] pointer-events-auto"
+          className="font-display text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm dark:text-black md:text-7xl md:leading-[5rem] pointer-events-auto"
         />
       </div>
     </div>

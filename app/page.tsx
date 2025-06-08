@@ -1,8 +1,7 @@
 "use client";
 import { ScrollBasedVelocityDemo } from "@/components/layout/animescroll";
-import HeaderComponent from "@/components/layout/HeaderComponent";
+import HeroHeadersComponent from "@/components/layout/HeroHeadersComponent";
 import TexteComponent from "@/components/layout/TexteComponent";
-import { Hero } from "@/components/ui/animated-hero";
 import { Feature } from "@/components/ui/feature-with-advantages";
 import gsap from "gsap";
 import { useEffect } from "react";
@@ -62,8 +61,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <HeaderComponent />
-      <Hero />
+      <HeroHeadersComponent />
       <TexteComponent />
       <ScrollBasedVelocityDemo />
       <Feature />

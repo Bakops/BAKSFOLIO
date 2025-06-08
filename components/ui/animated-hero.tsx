@@ -23,11 +23,11 @@ function Hero() {
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full">
-      <div className="container mx-auto">
-        <div className="flex gap-8 p-10 items-center justify-center flex-col">
+    <div className="w-full flex flex-col items-center justify-center">
+      <div className="container mx-auto flex flex-col items-center justify-center">
+        <div className="flex flex-col gap-8 p-10 items-center justify-center text-center">
           <div className="mt-24"></div>
-          <div className="flex gap-4 flex-col text-[#FFF]">
+          <div className="flex flex-col gap-4 text-[#FFF] items-center justify-center text-center">
             <h1 className="text-5xl md:text-7xl max-w-[52rem] tracking-tighter text-center font-bold font-poppins">
               <span className="text-spektr-cyan-50">
                 Je conçois et développe<span className="text-[#FA9F18]">.</span>{" "}
@@ -64,14 +64,7 @@ function Hero() {
               développement d'applications web et design de maquettes sur Figma.
             </p>
           </div>
-          <div className="flex flex-row gap-3">
-            <Button
-              size="lg"
-              className="gap-4 bg-[#FA9F18] border-[#FA9F18]"
-              variant="outline"
-            >
-              Créer mon projet 🚀{" "}
-            </Button>
+          <div className="flex flex-row gap-3 items-center justify-center">
             <Button size="lg" variant="default" className="gap-4">
               Voir mes services <MoveRight className="w-4 h-4" />
             </Button>
