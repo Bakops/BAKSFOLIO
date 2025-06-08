@@ -6,7 +6,7 @@ function Feature() {
       <div className="container mx-auto">
         <div className="flex gap-4 flex-col items-start">
           <div>
-            <Badge>Solution SEO</Badge>
+            <Badge>Solution web & applicative</Badge>
           </div>
           <div className="flex gap-2 flex-col">
             <h2 className="text-3xl font-bold text-[#FFF] md:text-5xl tracking-tighter lg:max-w-[44rem] font-regular">

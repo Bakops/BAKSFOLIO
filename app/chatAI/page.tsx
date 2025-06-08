@@ -76,19 +76,19 @@ export default function ChatInterface() {
   };
 
   return (
-    <div className="flex h-screen bg-[#212121] dark:bg-gray-900">
+    <div className="flex h-screen bg-[#000] dark:bg-gray-900">
       {/* Left Sidebar with Text Logo */}
-      <div className="w-64 bg-[#212121] border-r-[1px]  text-white p-4 flex flex-col">
+      <div className="w-64 bg-[#212121]  text-white p-4 flex flex-col">
         <div className="flex justify-center mb-4">
           <h1 className="text-2xl font-bold text-white">
             Yellow
-            <span className="text-[#eddb12] text-[16px] font-bold">AI</span>
+            <span className="text-[#FA9F18] text-[16px] font-bold">AI</span>
           </h1>
         </div>
 
         <button
           onClick={handleNewChat}
-          className="flex items-center gap-2 w-full  pt-[8px] pb-[8px] pl-[10px] pr-[10px] rounded-md bg-[#fff] bg-opacity-20 backdrop-blur-xl hover:bg-[#eddb12] hover:bg-opacity-20 hover:backdrop-blur-xl  transition-colors"
+          className="flex items-center gap-2 w-full  pt-[8px] pb-[8px] pl-[10px] pr-[10px] rounded-md bg-[#fff] bg-opacity-20 backdrop-blur-xl hover:bg-[#FA9F18] hover:bg-opacity-20 hover:backdrop-blur-xl  transition-colors"
         >
           <Plus size={16} />
           Nouveau chat
@@ -99,7 +99,7 @@ export default function ChatInterface() {
             <div
               key={chat.id}
               onClick={() => setCurrentChat(chat.id)}
-              className={`flex items-center gap-2  pt-[8px] pb-[8px] pl-[10px] pr-[10px] rounded-md cursor-pointer hover:bg-[#eddb12] hover:bg-opacity-20 hover:backdrop-blur-xl  transition-colors ${
+              className={`flex items-center gap-2  pt-[8px] pb-[8px] pl-[10px] pr-[10px] rounded-md cursor-pointer hover:bg-[#FA9F18] hover:bg-opacity-20 hover:backdrop-blur-xl  transition-colors ${
                 currentChat === chat.id ? "bg-gray-700" : "hover:bg-gray-800"
               }`}
             >
@@ -140,7 +140,7 @@ export default function ChatInterface() {
             >
               <h1 className="text-4xl font-bold text-white">
                 Yellow
-                <span className="text-[#eddb12]  font-bold">AI</span>
+                <span className="text-[#FA9F18]  font-bold">AI</span>
               </h1>
               <div className="space-y-4 mt-5">
                 <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
@@ -176,7 +176,7 @@ export default function ChatInterface() {
               <div
                 className={`max-w-[80%] rounded-full pl-[20px] pr-[20px] pt-[10px] pb-[10px] ${
                   message.role === "assistant"
-                    ? "bg-[#eddb12] bg-opacity-20 backdrop-blur-xl text-[#FFF] text-[13px]"
+                    ? "bg-[#FA9F18] bg-opacity-20 backdrop-blur-xl text-[#FFF] text-[13px]"
                     : "bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl text-[#FFF] text-[13px]"
                 }`}
               >
@@ -186,7 +186,7 @@ export default function ChatInterface() {
           ))}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="max-w-[80%] rounded-full pl-[20px] pr-[20px] pt-[10px] pb-[10px] bg-[#eddb12] bg-opacity-20 backdrop-blur-xl text-[#FFF] text-[13px]">
+              <div className="max-w-[80%] rounded-full pl-[20px] pr-[20px] pt-[10px] pb-[10px] bg-[#FA9F18] bg-opacity-20 backdrop-blur-xl text-[#FFF] text-[13px]">
                 <span className="animate-pulse">Thinking...</span>
               </div>
             </div>
@@ -204,7 +204,7 @@ export default function ChatInterface() {
                     "Comment améliorer le référencement de mon site web ?"
                   )
                 }
-                className="px-4 py-2 bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl text-[#FFF] rounded-full  text-[13px]  hover:bg-[#eddb12] hover:bg-opacity-20 hover:backdrop-blur-xl hover:text-[#FFF]"
+                className="px-4 py-2 bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl text-[#FFF] rounded-full  text-[13px]  hover:bg-[#FA9F18] hover:bg-opacity-20 hover:backdrop-blur-xl hover:text-[#FFF]"
               >
                 Améliorer le référencement du site web
               </button>
@@ -214,7 +214,7 @@ export default function ChatInterface() {
                     "Quels sont les meilleurs outils de recherche de mots-clés ?"
                   )
                 }
-                className="px-4 py-2 bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl text-[#FFF] rounded-full  text-[13px] hover:bg-[#eddb12] hover:bg-opacity-20 hover:backdrop-blur-xl hover:text-[#FFF]"
+                className="px-4 py-2 bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl text-[#FFF] rounded-full  text-[13px] hover:bg-[#FA9F18] hover:bg-opacity-20 hover:backdrop-blur-xl hover:text-[#FFF]"
               >
                 Outils de recherche de mots-clés
               </button>
@@ -222,7 +222,7 @@ export default function ChatInterface() {
                 onClick={() =>
                   setInputMessage("Comment optimiser les balises méta ?")
                 }
-                className="px-4 py-2 bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl text-[#FFF] rounded-full  text-[13px]  hover:bg-[#eddb12] hover:bg-opacity-20 hover:backdrop-blur-xl hover:text-[#FFF]"
+                className="px-4 py-2 bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl text-[#FFF] rounded-full  text-[13px]  hover:bg-[#FA9F18] hover:bg-opacity-20 hover:backdrop-blur-xl hover:text-[#FFF]"
               >
                 Optimisation des balises méta
               </button>
@@ -238,11 +238,11 @@ export default function ChatInterface() {
                 onBlur={() => setIsInputFocused(false)}
                 onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
                 placeholder="Tapez votre message ici..."
-                className="flex-1 p-4 rounded-full bg-[#f4f4f4] h-[3rem] bg-opacity-20 backdrop-blur-xl focus:outline-none focus:ring-2 focus:ring-[#eddb12] focus:ring-opacity-40 text-[#FFF]  text-[13px] placeholder:text-[#FFF]"
+                className="flex-1 p-4 rounded-full bg-[#f4f4f4] h-[3rem] bg-opacity-20 backdrop-blur-xl focus:outline-none focus:ring-2 focus:ring-[#FA9F18] focus:ring-opacity-40 text-[#FFF]  text-[13px] placeholder:text-[#FFF]"
               />
               <button
                 onClick={handleSendMessage}
-                className="p-4 bg-[#eddb12] bg-opacity-20 backdrop-blur-xl h-[3rem] w-[3rem] flex justify-center text-white rounded-full hover:bg-[#eddb12] transition-colors"
+                className="p-4 bg-[#FA9F18] bg-opacity-20 backdrop-blur-xl h-[3rem] w-[3rem] flex justify-center text-white rounded-full hover:bg-[#FA9F18] transition-colors"
               >
                 <Send className="h-5 w-5" />
               </button>
@@ -250,6 +250,7 @@ export default function ChatInterface() {
           </div>
         </div>
       </div>
+      <div className="glow absolute opacity-35 right-4"></div>
     </div>
   );
 }

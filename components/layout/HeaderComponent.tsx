@@ -10,13 +10,13 @@ export default function HeaderComponent() {
   };
 
   return (
-    <div className="fixed z-30 w-full flex flex-col items-center mt-[20px]">
+    <div className="fixed z-30 w-full flex flex-col items-center mt-[20px] ml-[20px] mr-[20px]">
       <header className="flex flex-row justify-between items-center p-4 bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl text-white rounded-xl w-full h-height_header md:w-[71.6%] gap-2">
         {/* Logo at the beginning */}
-        <div className="flex justify-center items-center ml-[25px] text-xl font-bold w-32 h-[95px]">
+        <div className="flex justify-center items-center ml-[15px] text-xl font-bold w-[12rem] h-[95px]">
           <Link href="/">
             <img
-              src="logo_header.png"
+              src="logo.png"
               alt="Logo"
               className="w-auto h-auto scale-125 object-contain"
             />
@@ -28,43 +28,43 @@ export default function HeaderComponent() {
           <ul className="flex flex-row gap-8">
             <li>
               <Link
-                href="/chatAI"
-                className="menu-link font-Poppins font-medium text-[14px]"
+                href="/"
+                className="menu-link font-Poppins font-bold text-[14px]"
               >
-                Yellow
-                <span className="text-[#eddb12] text-[16px] font-bold">AI</span>
+                Accueil
               </Link>
             </li>
             <li>
               <Link
-                href="/cours"
-                className="menu-link font-poppins font-medium text-[14px]"
+                href="/crawlSite"
+                className="menu-link font-poppins font-bold text-[14px]"
               >
-                Cours
+                Services
               </Link>
             </li>
             <li>
               <Link
                 href="/lessons"
-                className="menu-link font-poppins font-medium text-[14px]"
+                className="menu-link font-poppins font-bold text-[14px]"
               >
-                Crédit
+                Réalisations
+                <span className="text-[#FA9F18] text-[16px] font-bold">.</span>
               </Link>
             </li>
             <li>
               <Link
                 href="/apropos"
-                className="menu-link font-poppins font-medium text-[14px]"
+                className="menu-link font-poppins font-bold text-[14px]"
               >
-                Ressources
+                À propos
               </Link>
             </li>
             <li>
               <Link
                 href="/contact"
-                className="menu-link font-poppins font-medium text-[14px]"
+                className="menu-link font-poppins font-bold text-[14px]"
               >
-                Blog
+                Contact
               </Link>
             </li>
           </ul>
@@ -72,11 +72,11 @@ export default function HeaderComponent() {
 
         <div className="hidden md:flex flex-wrap items-center justify-center gap-4">
           <Link
-            href="/chatAI"
-            title="S'inscrire"
+            href="https://cal.com/bakou-toure/30min"
+            title="Prendre un rendez-vous"
             className="inline-flex gap-2 items-center justify-center py-1.5 px-4 text-sm font-medium text-[#FFF] bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl rounded-md transition-all duration-200 border-b-2 border-transparent hover:bg-[#c3cc50] hover:text-[#FFF] hover:bg-opacity-20 hover:backdrop-blur-xl"
           >
-            Générer du contenue
+            Contactez moi
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -84,7 +84,7 @@ export default function HeaderComponent() {
               fill="currentColor"
               viewBox="0 0 16 16"
             >
-              <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z" />
+              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
             </svg>
           </Link>
         </div>
@@ -127,8 +127,7 @@ export default function HeaderComponent() {
                 href="/chatAI"
                 className="menu-link text-4xl font-poppins font-bold menu-link-active"
               >
-                <span className="text-[#eddb12] text-4xl font-bold">AI</span>
-                Yellow
+                Accueil
               </Link>
             </li>
             <li>
@@ -136,7 +135,7 @@ export default function HeaderComponent() {
                 href="/test/page/cours"
                 className="menu-link text-4xl font-poppins font-bold"
               >
-                Cours
+                Services
               </Link>
             </li>
             <li>
@@ -152,7 +151,8 @@ export default function HeaderComponent() {
                 href="/test/page/a_propos"
                 className="menu-link text-4xl font-poppins font-bold"
               >
-                Ressources
+                Réalisations
+                <span className="text-[#FA9F18] text-[16px] font-bold">.</span>
               </Link>
             </li>
             <li>
@@ -160,7 +160,15 @@ export default function HeaderComponent() {
                 href="/test/page/contact"
                 className="menu-link text-4xl font-poppins font-bold"
               >
-                Blog
+                À propos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="menu-link text-4xl font-poppins font-bold"
+              >
+                Contact
               </Link>
             </li>
           </ul>

@@ -1,11 +1,9 @@
 "use client";
 import { ScrollBasedVelocityDemo } from "@/components/layout/animescroll";
-import SlideAnimation from "@/components/layout/BandeauxComponent";
 import HeaderComponent from "@/components/layout/HeaderComponent";
 import TexteComponent from "@/components/layout/TexteComponent";
 import { Hero } from "@/components/ui/animated-hero";
 import { Feature } from "@/components/ui/feature-with-advantages";
-import VideoPlayer from "@/components/ui/video-player";
 import gsap from "gsap";
 import { useEffect } from "react";
 
@@ -66,18 +64,13 @@ export default function Home() {
     <>
       <HeaderComponent />
       <Hero />
-      <SlideAnimation />
       <TexteComponent />
-      <div className="mt-20">
-        <VideoPlayer src="https://videos.pexels.com/video-files/30333849/13003128_2560_1440_25fps.mp4" />
-      </div>
       <ScrollBasedVelocityDemo />
       <Feature />
-
-      <div className="cursor-small fixed top-0 left-0 z-1 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#eddb12] h-3 w-3 hidden md:block">
-        <div className="cursor-point absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#eddb12] h-3 w-3 z-2"></div>
+      <div className="cursor-small fixed top-0 left-0 z-1 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#FA9F18] h-3 w-3 hidden md:block">
+        <div className="cursor-point absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FA9F18] h-3 w-3 z-2"></div>
       </div>
-      <div className="cursor-big fixed top-0 left-0 z-9999 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#eddb12] text-[#eddb12] flex items-center justify-center text-5xl font-extrabold p-2 text-center transition-colors duration-500 cursor-pointer h-24 w-24">
+      <div className="cursor-big fixed top-0 left-0 z-9999 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#FA9F18] text-[#FA9F18] flex items-center justify-center text-5xl font-extrabold p-2 text-center transition-colors duration-500 cursor-pointer h-24 w-24">
         <p className="mt-2 text-xl">+</p>
       </div>
     </>

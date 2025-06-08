@@ -7,7 +7,7 @@ import { useEffect, useMemo, useState } from "react";
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["pertinent", "rapide", "impactant", "optimisé", "performant"],
+    () => ["moderne", "sur-mesure", "créatif", "professionnel", "responsive"],
     []
   );
 
@@ -26,23 +26,19 @@ function Hero() {
     <div className="w-full">
       <div className="container mx-auto">
         <div className="flex gap-8 p-10 items-center justify-center flex-col">
-          <div className="mt-24">
-            <Button variant="secondary" size="sm" className="gap-4">
-              Découvrir nos articles sur le SEO{" "}
-              <MoveRight className="w-4 h-4" />
-            </Button>
-          </div>
+          <div className="mt-24"></div>
           <div className="flex gap-4 flex-col text-[#FFF]">
-            <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
+            <h1 className="text-5xl md:text-7xl max-w-[52rem] tracking-tighter text-center font-bold font-poppins">
               <span className="text-spektr-cyan-50">
-                Boostez votre SEO avec du contenu
+                Je conçois et développe<span className="text-[#FA9F18]">.</span>{" "}
+                des projets web
               </span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
                   <motion.span
                     key={index}
-                    className="absolute font-semibold text-[#eddb12] italic"
+                    className="absolute font-semibold text-[#FA9F18] italic"
                     initial={{ opacity: 0, y: "-100" }}
                     transition={{ type: "spring", stiffness: 50 }}
                     animate={
@@ -64,36 +60,24 @@ function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center text-[#FFF]">
-              Créez des textes optimisés, engageants et adaptés à votre audience
-              pour améliorer votre visibilité, attirer du trafic qualifié et
-              maximiser votre croissance en ligne
+              Spécialisé en création de sites WordPress et Shopify,
+              développement d'applications web et design de maquettes sur Figma.
             </p>
           </div>
           <div className="flex flex-row gap-3">
             <Button
               size="lg"
-              className="gap-4 bg-[#eddb12] border-[#eddb12]"
+              className="gap-4 bg-[#FA9F18] border-[#FA9F18]"
               variant="outline"
             >
-              Générer du contenue{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z" />
-              </svg>
+              Créer mon projet 🚀{" "}
             </Button>
             <Button size="lg" variant="default" className="gap-4">
-              En savoir plus <MoveRight className="w-4 h-4" />
+              Voir mes services <MoveRight className="w-4 h-4" />
             </Button>
           </div>
         </div>
       </div>
-      <div className="glow absolute opacity-35"></div>
-      <div className="glow absolute opacity-35 right-4"></div>
     </div>
   );
 }
