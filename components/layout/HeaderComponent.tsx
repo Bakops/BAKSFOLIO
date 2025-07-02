@@ -104,7 +104,7 @@ export default function HeaderComponent() {
 
         {/* Hamburger menu for mobile */}
         <button
-          className="flex flex-col justify-center items-center gap-1 md:hidden"
+          className="flex flex-col justify-center items-center gap-1 md:hidden mr-[10px]"
           onClick={toggleMenu}
         >
           <span className="w-6 h-0.5 bg-white"></span>
