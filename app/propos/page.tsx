@@ -44,7 +44,7 @@ export default function ProposPage() {
   return (
     <>
       <HeaderComponent />
-      <div className="min-h-screen bg-[#181818] pt-24 pb-12 px-4 flex flex-col items-center">
+      <div className="min-h-screen bg-[#000] pt-24 pb-12 px-4 flex flex-col items-center">
         {/* Présentation + photo */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-6xl mb-12">
           {/* Texte présentation */}

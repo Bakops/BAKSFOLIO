@@ -19,14 +19,14 @@ export default function HeaderComponent() {
   }, []);
 
   return (
-    <div className="fixed z-30 w-full flex flex-col items-center mt-[20px] ml-[20px] mr-[20px]">
+    <div className="fixed z-30 w-full flex flex-col items-center px-2 sm:px-4 md:px-8 pt-5">
       <header
-        className={`flex flex-row justify-between items-center p-4 transition-colors duration-300 ${
+        className={`flex flex-row justify-between items-center p-3 sm:p-4 transition-colors duration-300 ${
           scrolled ? "bg-[#FA9F18] bg-opacity-90" : "bg-[#f4f4f4] bg-opacity-20"
-        } backdrop-blur-xl text-white rounded-[20px] w-full h-height_header md:w-[71.6%] gap-2`}
+        } backdrop-blur-xl text-white rounded-[20px] w-full max-w-[1200px] h-height_header gap-2`}
       >
         {/* Logo at the beginning */}
-        <div className="flex justify-center items-center ml-[15px] text-xl font-bold w-[12rem] h-[95px]">
+        <div className="flex justify-center items-center ml-2 sm:ml-4 text-xl font-bold w-[8rem] sm:w-[12rem] h-[70px] sm:h-[95px]">
           <Link href="/">
             <img
               src="logo.png"
@@ -37,8 +37,8 @@ export default function HeaderComponent() {
         </div>
 
         {/* Menu links in the middle */}
-        <nav className={`hidden md:flex flex-row gap-8`}>
-          <ul className="flex flex-row gap-8">
+        <nav className="hidden md:flex flex-row gap-4 sm:gap-8">
+          <ul className="flex flex-row gap-4 sm:gap-8">
             <li>
               <Link
                 href="/"
@@ -134,35 +134,30 @@ export default function HeaderComponent() {
             </button>
           </div>
 
-          <ul className="flex flex-col justify-end gap-10 ml-5">
+          <ul className="flex flex-col justify-end gap-5 ml-5">
             <li>
               <Link
-                href="/chatAI"
-                className="menu-link text-4xl font-poppins font-bold menu-link-active"
+                href="/"
+                className="menu-link text-2xl font-poppins font-bold menu-link-active"
+                onClick={toggleMenu}
               >
                 Accueil
               </Link>
             </li>
             <li>
               <Link
-                href="/test/page/cours"
-                className="menu-link text-4xl font-poppins font-bold"
+                href="/crawlSite"
+                className="menu-link text-2xl font-poppins font-bold"
+                onClick={toggleMenu}
               >
                 Services
               </Link>
             </li>
             <li>
               <Link
-                href="/test/page/lessons"
-                className="menu-link text-4xl font-poppins font-bold"
-              >
-                Crédit
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/test/page/a_propos"
-                className="menu-link text-4xl font-poppins font-bold"
+                href="/realisations"
+                className="menu-link text-2xl font-poppins font-bold"
+                onClick={toggleMenu}
               >
                 Réalisations
                 <span className="text-[#FA9F18] text-[16px] font-bold">.</span>
@@ -170,8 +165,9 @@ export default function HeaderComponent() {
             </li>
             <li>
               <Link
-                href="/test/page/contact"
-                className="menu-link text-4xl font-poppins font-bold"
+                href="/propos"
+                className="menu-link text-2xl font-poppins font-bold"
+                onClick={toggleMenu}
               >
                 À propos
               </Link>
@@ -179,14 +175,37 @@ export default function HeaderComponent() {
             <li>
               <Link
                 href="/contact"
-                className="menu-link text-4xl font-poppins font-bold"
+                className="menu-link text-2xl font-poppins font-bold"
+                onClick={toggleMenu}
               >
                 Contact
               </Link>
             </li>
           </ul>
+          {/* Bouton contact rendez-vous sur mobile */}
+          <div className="flex justify-center mt-10">
+            <Link
+              href="https://cal.com/bakou-toure/30min"
+              title="Prendre un rendez-vous"
+              className="inline-flex gap-2 items-center justify-center py-2 px-6 text-lg font-medium text-[#FFF] bg-[#FA9F18] rounded-full transition-all duration-200 hover:bg-[#c3cc50]"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={toggleMenu}
+            >
+              Contactez moi
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+              </svg>
+            </Link>
+          </div>
           {/* Social media icons at the end, hidden on mobile */}
-          <div className="flex flex-row flex-wrap items-center justify-center mt-64">
+          <div className="flex flex-row flex-wrap items-center justify-center mt-16">
             <a
               href=""
               className="flex items-center justify-center w-10 h-10 text-gray-300 transition duration-250 hover:text-[#c3cc50] hover:shadow-lg"
@@ -202,7 +221,6 @@ export default function HeaderComponent() {
               </svg>
               <span className="sr-only">TWITTER</span>
             </a>
-
             <a
               href=""
               rel="author"
@@ -219,7 +237,6 @@ export default function HeaderComponent() {
               </svg>
               <span className="sr-only">GOOGLE +</span>
             </a>
-
             <a
               href=""
               rel="author"
@@ -237,9 +254,9 @@ export default function HeaderComponent() {
               <span className="sr-only">FACEBOOK</span>
             </a>
           </div>
-          <div className="text-center text-sm text-gray-600 hover:underline">
+          <div className="text-center text-sm text-white hover:underline mt-8">
             <a href="">
-              <p>© Bakops 2024 · Tous droits réservés </p>
+              <p>© BakopsDev 2025 · Tous droits réservés </p>
             </a>
           </div>
         </div>
