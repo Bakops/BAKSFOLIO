@@ -2,7 +2,7 @@ import { Hero } from "@/components/ui/animated-hero";
 import HeaderComponent from "./HeaderComponent";
 export default function HeroHeadersComponent() {
   return (
-    <div className="flex flex-col items-center bg-[#000] text-white min-h-[80vh] md:min-h-[70vh] rounded-b-3xl pb-8 pt-4 relative overflow-hidden">
+    <div className="flex flex-col items-center bg-[#000] text-white min-h-[65vh] md:min-h-[70vh] rounded-b-3xl pb-8 pt-4 relative overflow-hidden">
       <HeaderComponent />
       <Hero />
       {/* Blobs d'arrière-plan responsives */}

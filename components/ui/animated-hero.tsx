@@ -27,7 +27,7 @@ function Hero() {
       <div className="container mx-auto flex flex-col items-center justify-center px-2 sm:px-4">
         <div className="flex flex-col gap-8 p-4 sm:p-8 md:p-10 items-center justify-center text-center">
           <div className="mt-16 sm:mt-20 md:mt-24"></div>
-          <div className="flex flex-col gap-4 text-[#FFF] items-center justify-center text-center">
+          <div className="flex flex-col  text-[#FFF] items-center justify-center text-center">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl w-full max-w-[98vw] sm:max-w-[52rem] tracking-tighter text-center font-bold font-poppins leading-tight">
               <span className="text-spektr-cyan-50">
                 Je conçois et développe<span className="text-[#FA9F18]">.</span>{" "}
