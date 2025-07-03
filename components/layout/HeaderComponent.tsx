@@ -49,7 +49,7 @@ export default function HeaderComponent() {
             </li>
             <li>
               <Link
-                href="/crawlSite"
+                href="/service"
                 className="menu-link font-poppins font-bold text-[14px]"
               >
                 Services
@@ -115,7 +115,7 @@ export default function HeaderComponent() {
 
       {/* Full-screen menu with slide animation */}
       <div
-        className={`fixed inset-0 bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl text-white transform ${
+        className={`fixed inset-0 bg-[#000]  backdrop-blur-xl text-white transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-200 z-10 md:hidden`}
       >
@@ -146,7 +146,7 @@ export default function HeaderComponent() {
             </li>
             <li>
               <Link
-                href="/crawlSite"
+                href="/service"
                 className="menu-link text-2xl font-poppins font-bold"
                 onClick={toggleMenu}
               >

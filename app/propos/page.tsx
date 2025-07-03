@@ -1,167 +1,348 @@
-"use client";
-import SlideAnimation from "@/components/layout/BandeauxComponent"; // Animation des technos
 import HeaderComponent from "@/components/layout/HeaderComponent";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Calendar,
+  ExternalLink,
+  Github,
+  GraduationCap,
+  Linkedin,
+  Mail,
+  MapPin,
+} from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+
+const technologies = [
+  { name: "React", icon: "⚛️" },
+  { name: "Next.js", icon: "▲" },
+  { name: "TypeScript", icon: "📘" },
+  { name: "JavaScript", icon: "🟨" },
+  { name: "TailwindCSS", icon: "🎨" },
+  { name: "Python", icon: "🐍" },
+  { name: "GitHub", icon: "🐙" },
+  { name: "Linux", icon: "🐧" },
+];
 
 const formations = [
   {
     title: "Licence Informatique",
-    school: "Université de Paris",
-    year: "2022 - 2025",
+    institution: "Université de Paris",
+    period: "2022 - 2025",
+    status: "En cours",
+    description:
+      "Formation complète en informatique avec spécialisation en développement web",
   },
   {
     title: "Certification React",
-    school: "OpenClassrooms",
-    year: "2023",
+    institution: "OpenClassrooms",
+    period: "2023",
+    status: "Certifié",
+    description:
+      "Maîtrise approfondie de React et de l'écosystème moderne JavaScript",
   },
   {
     title: "Formation UI/UX Design",
-    school: "Udemy",
-    year: "2022",
+    institution: "Udemy",
+    period: "2022",
+    status: "Complété",
+    description: "Principes de design d'interface et d'expérience utilisateur",
   },
 ];
 
-const apercuRealisations = [
+const projects = [
   {
     title: "Portfolio Créatif",
-    image: "/images/realisation-1.jpg",
-    link: "/realisations",
+    description: "Site portfolio personnel avec animations modernes",
+    tech: ["Next.js", "Framer Motion", "TailwindCSS"],
+    image: "/placeholder.svg?height=200&width=300",
   },
   {
     title: "Boutique Shopify",
-    image: "/images/realisation-2.jpg",
-    link: "/realisations",
+    description: "E-commerce personnalisé avec intégrations avancées",
+    tech: ["Shopify", "Liquid", "JavaScript"],
+    image: "/placeholder.svg?height=200&width=300",
   },
   {
     title: "Blog WordPress",
-    image: "/images/realisation-3.jpg",
-    link: "/realisations",
+    description: "Blog moderne avec thème personnalisé",
+    tech: ["WordPress", "PHP", "CSS"],
+    image: "/placeholder.svg?height=200&width=300",
   },
 ];
 
-export default function ProposPage() {
+export default function AboutPage() {
   return (
     <>
       <HeaderComponent />
-      <div className="min-h-screen bg-[#000] pt-24 pb-12 px-4 flex flex-col items-center">
-        {/* Présentation + photo */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-6xl mb-12">
-          {/* Texte présentation */}
-          <div className="flex-1 text-white text-lg md:text-xl font-poppins">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#FA9F18]">
-              À propos de moi
-            </h1>
-            <p>
-              Je m'appelle{" "}
-              <span className="font-bold text-[#FA9F18]">Bakou Touré</span>,
-              étudiant passionné et développeur front-end.
-              <br />
-              J'aime concevoir des interfaces modernes, dynamiques et
-              accessibles.
-              <br />
-              J'utilise principalement{" "}
-              <span className="font-semibold text-[#FA9F18]">
-                React, Next.js, TailwindCSS
-              </span>{" "}
-              et d'autres outils du web pour créer des expériences uniques.
-              <br />
-              Toujours curieux, j'apprends en continu pour rester à la pointe
-              des technologies.
-            </p>
-          </div>
-          {/* Photo */}
-          <div className="flex-1 flex justify-center">
-            <div className="relative w-72 h-72 rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FA9F18]">
-              <Image
-                src="/images/photo-profil.jpg"
-                alt="Photo de Bakou Touré"
-                fill
-                className="object-cover"
-                priority
-              />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 px-4">
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 dark:from-orange-500/5 dark:to-yellow-500/5" />
+          <div className="relative max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <Badge variant="outline" className="w-fit">
+                    <Calendar className="w-3 h-3 mr-1" />
+                    Disponible pour de nouveaux projets
+                  </Badge>
+                  <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+                    À propos de moi
+                  </h1>
+                  <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                    <p>
+                      Je m'appelle{" "}
+                      <span className="font-semibold text-orange-500">
+                        Bakou Touré
+                      </span>
+                      , étudiant passionné et développeur front-end basé à
+                      Paris.
+                    </p>
+                    <p>
+                      J'aime concevoir des interfaces modernes, dynamiques et
+                      accessibles qui offrent une expérience utilisateur
+                      exceptionnelle.
+                    </p>
+                    <p>
+                      J'utilise principalement{" "}
+                      <span className="font-medium">
+                        React, Next.js, TailwindCSS
+                      </span>{" "}
+                      et d'autres outils du web moderne pour créer des
+                      expériences uniques.
+                    </p>
+                    <p>
+                      Toujours curieux, j'apprends en continu pour rester à la
+                      pointe des technologies.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600"
+                  >
+                    <Mail className="w-4 h-4 mr-2" />
+                    Me contacter
+                  </Button>
+                  <Button variant="outline" size="lg">
+                    <Github className="w-4 h-4 mr-2" />
+                    GitHub
+                  </Button>
+                  <Button variant="outline" size="lg">
+                    <Linkedin className="w-4 h-4 mr-2" />
+                    LinkedIn
+                  </Button>
+                </div>
+              </div>
+
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-3xl blur-xl opacity-30 animate-pulse" />
+                  <div className="relative bg-gradient-to-r from-orange-500 to-yellow-500 p-1 rounded-3xl">
+                    <div className="bg-background rounded-3xl p-2">
+                      <Image
+                        src="/placeholder.svg?height=400&width=320"
+                        alt="Bakou Touré"
+                        width={320}
+                        height={400}
+                        className="rounded-2xl object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Animation des technos */}
-        <div className="w-full max-w-4xl mb-12">
-          <SlideAnimation />
-        </div>
+        {/* Technologies Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Technologies & Outils</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Les technologies que j'utilise quotidiennement pour créer des
+                expériences web modernes
+              </p>
+            </div>
 
-        {/* Formations */}
-        <div className="w-full max-w-4xl mb-12">
-          <h2 className="text-3xl font-bold text-[#FA9F18] mb-6 font-poppins">
-            Formations
-          </h2>
-          <ul className="space-y-4">
-            {formations.map((f, idx) => (
-              <li
-                key={idx}
-                className="bg-[#222] rounded-xl p-4 flex flex-col md:flex-row md:items-center md:justify-between border-l-4 border-[#FA9F18]"
-              >
-                <div>
-                  <span className="font-semibold text-white">{f.title}</span>
-                  <span className="block text-gray-400">{f.school}</span>
-                </div>
-                <span className="text-[#FA9F18] font-bold">{f.year}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Aperçu réalisations */}
-        <div className="w-full max-w-4xl mb-12">
-          <h2 className="text-3xl font-bold text-[#FA9F18] mb-6 font-poppins">
-            Aperçu de mes réalisations
-          </h2>
-          <div className="flex flex-col md:flex-row gap-6">
-            {apercuRealisations.map((r, idx) => (
-              <Link
-                href={r.link}
-                key={idx}
-                className="flex-1 bg-[#222] rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform border border-[#FA9F18]/30"
-              >
-                <div className="relative w-full h-48">
-                  <Image
-                    src={r.image}
-                    alt={r.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4 text-center text-white font-semibold">
-                  {r.title}
-                </div>
-              </Link>
-            ))}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+              {technologies.map((tech, index) => (
+                <Card
+                  key={index}
+                  className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                      {tech.icon}
+                    </div>
+                    <p className="text-sm font-medium">{tech.name}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-          <div className="flex justify-center mt-4">
-            <Link
-              href="/realisations"
-              className="px-6 py-2 rounded-full bg-[#FA9F18] text-white font-semibold shadow hover:bg-[#c3cc50] transition"
-            >
-              Voir toutes les réalisations
-            </Link>
-          </div>
-        </div>
+        </section>
 
-        {/* Bloc contactez-moi */}
-        <div className="w-full max-w-2xl bg-[#FA9F18] rounded-3xl p-8 flex flex-col items-center shadow-2xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-poppins">
-            Contactez-moi
-          </h2>
-          <p className="text-white mb-6 text-center">
-            Un projet, une question ou envie d'échanger ?<br />
-            N'hésitez pas à me contacter, je réponds rapidement !
-          </p>
-          <Link
-            href="/contact"
-            className="px-8 py-3 rounded-full bg-white text-[#FA9F18] font-bold text-lg shadow hover:bg-[#f4f4f4] transition"
-          >
-            Me contacter
-          </Link>
-        </div>
+        {/* Education Section */}
+        <section className="py-16 px-4 bg-background/50">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-2">
+                <GraduationCap className="w-8 h-8 text-orange-500" />
+                Formations
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Mon parcours académique et professionnel dans le développement
+                web
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {formations.map((formation, index) => (
+                <Card
+                  key={index}
+                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-l-4 border-l-orange-500"
+                >
+                  <CardHeader>
+                    <div className="flex justify-between items-start mb-2">
+                      <Badge
+                        variant={
+                          formation.status === "En cours"
+                            ? "default"
+                            : "secondary"
+                        }
+                      >
+                        {formation.status}
+                      </Badge>
+                      <span className="text-sm text-muted-foreground font-medium">
+                        {formation.period}
+                      </span>
+                    </div>
+                    <CardTitle className="group-hover:text-orange-500 transition-colors">
+                      {formation.title}
+                    </CardTitle>
+                    <CardDescription className="flex items-center gap-1">
+                      <MapPin className="w-3 h-3" />
+                      {formation.institution}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {formation.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Preview Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">
+                Aperçu de mes réalisations
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Quelques projets qui illustrent mes compétences et ma passion
+                pour le développement
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project, index) => (
+                <Card
+                  key={index}
+                  className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                >
+                  <div className="relative overflow-hidden">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      width={300}
+                      height={200}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <Button
+                      size="sm"
+                      className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                    </Button>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="group-hover:text-orange-500 transition-colors">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech, techIndex) => (
+                        <Badge
+                          key={techIndex}
+                          variant="outline"
+                          className="text-xs"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Button
+                size="lg"
+                variant="outline"
+                className="group bg-transparent"
+              >
+                Voir tous mes projets
+                <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 dark:from-orange-500/5 dark:to-yellow-500/5">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+              Prêt à collaborer sur votre prochain projet ?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Je suis toujours ouvert aux nouvelles opportunités et aux projets
+              passionnants. N'hésitez pas à me contacter pour discuter de vos
+              idées.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600"
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                Contactez-moi
+              </Button>
+              <Button size="lg" variant="outline">
+                Télécharger mon CV
+              </Button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
