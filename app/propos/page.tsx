@@ -11,9 +11,8 @@ import {
 import {
   Calendar,
   ExternalLink,
-  Github,
   GraduationCap,
-  Linkedin,
+  Link,
   Mail,
   MapPin,
 } from "lucide-react";
@@ -143,7 +142,10 @@ export default function AboutPage() {
                     size="lg"
                     className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
                   >
-                    <Mail className="w-4 h-4 mr-2" />
+                    <Mail
+                      className="w-4 h-4 mr-2"
+                      href="https://cal.com/bakou-toure/30min"
+                    />
                     Me contacter
                   </Button>
                   <Button
@@ -151,7 +153,10 @@ export default function AboutPage() {
                     size="lg"
                     className="border-gray-700 bg-[#f4f4f4] bg-opacity-20 text-white hover:border-orange-500"
                   >
-                    <Github className="w-4 h-4 mr-2" />
+                    <Link
+                      className="w-4 h-4 mr-2"
+                      href="https://github.com/Bakops"
+                    />
                     GitHub
                   </Button>
                   <Button
@@ -159,7 +164,10 @@ export default function AboutPage() {
                     size="lg"
                     className="border-gray-700 bg-[#f4f4f4] bg-opacity-20 text-white hover:border-orange-500"
                   >
-                    <Linkedin className="w-4 h-4 mr-2" />
+                    <Link
+                      className="w-4 h-4 mr-2"
+                      href="https://www.linkedin.com/in/toure-bakou-a2b05921a/"
+                    />
                     LinkedIn
                   </Button>
                 </div>
