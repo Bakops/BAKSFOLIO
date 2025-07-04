@@ -28,9 +28,12 @@ function Hero() {
         <div className="flex flex-col gap-8 p-4 sm:p-8 md:p-10 items-center justify-center text-center">
           <div className="mt-16 sm:mt-20 md:mt-24"></div>
           <div className="flex flex-col  text-[#FFF] items-center justify-center text-center">
-            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl w-full max-w-[98vw] sm:max-w-[52rem] tracking-tighter text-center font-bold font-poppins leading-tight">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-7xl w-full max-w-[98vw] sm:max-w-[52rem] tracking-tighter text-center font-bold font-poppins leading-tight">
               <span className="text-spektr-cyan-50">
-                Je conçois et développe<span className="text-[#FA9F18]">.</span>{" "}
+                Je conçois et développe
+                <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+                  .
+                </span>{" "}
                 <br></br>
                 des projets web
               </span>
@@ -39,7 +42,7 @@ function Hero() {
                 {titles.map((title, index) => (
                   <motion.span
                     key={index}
-                    className="absolute font-semibold text-[#FA9F18] italic text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+                    className="absolute font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent italic text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
                     initial={{ opacity: 0, y: "-100" }}
                     transition={{ type: "spring", stiffness: 50 }}
                     animate={

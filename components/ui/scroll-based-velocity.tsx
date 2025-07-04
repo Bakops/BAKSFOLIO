@@ -109,7 +109,10 @@ export function VelocityScroll({
     <section className="relative w-full">
       <ParallaxText
         baseVelocity={default_velocity}
-        className={cn("text-[#FA9F18]", className)}
+        className={cn(
+          "bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent",
+          className
+        )}
       >
         {text}
       </ParallaxText>

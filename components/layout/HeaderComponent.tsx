@@ -22,8 +22,10 @@ export default function HeaderComponent() {
     <div className="fixed z-30 w-full flex flex-col items-center px-2 sm:px-4 md:px-8 pt-5">
       <header
         className={`flex flex-row justify-between items-center p-3 sm:p-4 transition-colors duration-300 ${
-          scrolled ? "bg-[#FA9F18] bg-opacity-90" : "bg-[#f4f4f4] bg-opacity-20"
-        } backdrop-blur-xl text-white rounded-[20px] w-full max-w-[1200px] h-height_header gap-2`}
+          scrolled
+            ? "bg-gradient-to-r from-orange-500 to-yellow-500 text-white "
+            : "bg-[#f4f4f4] bg-opacity-20 text-white"
+        } backdrop-blur-xl rounded-[20px] w-full max-w-[1200px] h-height_header gap-2`}
       >
         {/* Logo at the beginning */}
         <div className="flex justify-center items-center ml-2 sm:ml-4 text-xl font-bold w-[8rem] sm:w-[12rem] h-[70px] sm:h-[95px]">
@@ -134,7 +136,7 @@ export default function HeaderComponent() {
             </button>
           </div>
 
-          <ul className="flex flex-col justify-end gap-5 ml-5">
+          <ul className="flex flex-col justify-end gap-5 ml-3">
             <li>
               <Link
                 href="/"
