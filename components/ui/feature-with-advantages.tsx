@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 
 function Feature() {
   return (
-    <div className="w-full px-2 sm:px-6 md:px-10 py-10 sm:py-20 md:py-32">
+    <div className="w-full px-2 sm:px-6 md:px-10 py-10 sm:py-20 md:py-20">
       <div className="container mx-auto">
         <div className="flex flex-col gap-6 items-start mx-2 sm:mx-0">
           <Badge>Développement Fullstack</Badge>

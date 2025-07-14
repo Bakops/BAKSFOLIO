@@ -1,6 +1,8 @@
 "use client";
 import { ScrollBasedVelocityDemo } from "@/components/layout/animescroll";
+import FooterComponent from "@/components/layout/FooterComponent";
 import HeroHeadersComponent from "@/components/layout/HeroHeadersComponent";
+import TechnologieSections from "@/components/layout/TechnologieSections";
 import TexteComponent from "@/components/layout/TexteComponent";
 import { Feature } from "@/components/ui/feature-with-advantages";
 import gsap from "gsap";
@@ -65,6 +67,8 @@ export default function Home() {
       <TexteComponent />
       <ScrollBasedVelocityDemo />
       <Feature />
+      <TechnologieSections />
+      <FooterComponent />
       {/* Curseur custom, caché sur mobile */}
       <div className="cursor-small fixed top-0 left-0 z-1 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#FA9F18] h-3 w-3 hidden md:block">
         <div className="cursor-point absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FA9F18] h-3 w-3 z-2"></div>

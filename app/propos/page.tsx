@@ -1,3 +1,4 @@
+import FooterComponent from "@/components/layout/FooterComponent";
 import HeaderComponent from "@/components/layout/HeaderComponent";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -18,47 +19,67 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import {
+  SiAngular,
+  SiAuth0,
+  SiDocker,
+  SiFastapi,
+  SiFigma,
   SiGithub,
   SiJavascript,
-  SiLinux,
+  SiLaravel,
+  SiMysql,
   SiNextdotjs,
+  SiPostgresql,
   SiPython,
   SiReact,
+  SiRedis,
+  SiStripe,
   SiTailwindcss,
   SiTypescript,
+  SiWordpress,
 } from "react-icons/si";
 
 const technologies = [
-  { name: "React", icon: <SiReact className="text-sky-400" /> },
+  { name: "React", icon: <SiReact className="text-[#61DAFB]" /> },
   { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
-  { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
-  { name: "TailwindCSS", icon: <SiTailwindcss className="text-cyan-400" /> },
-  { name: "Python", icon: <SiPython className="text-yellow-300" /> },
+  { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+  { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+  { name: "TailwindCSS", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+  { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
   { name: "GitHub", icon: <SiGithub className="text-white" /> },
-  { name: "Linux", icon: <SiLinux className="text-yellow-200" /> },
+  { name: "Redis", icon: <SiRedis className="text-[#DC382D]" /> },
+  { name: "Stripe", icon: <SiStripe className="text-[#635BFF]" /> },
+  { name: "Angular", icon: <SiAngular className="text-[#DD0031]" /> },
+  { name: "MySQL", icon: <SiMysql className="text-[#00758F]" /> },
+  { name: "Docker", icon: <SiDocker className="text-[#2496ED]" /> },
+  { name: "WordPress", icon: <SiWordpress className="text-[#21759B]" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-[#336791]" /> },
+  { name: "Figma", icon: <SiFigma className="text-[#F24E1E]" /> },
+  { name: "Laravel", icon: <SiLaravel className="text-[#FF2D20]" /> },
+  { name: "Auth0", icon: <SiAuth0 className="text-white" /> },
+  { name: "FastAPI", icon: <SiFastapi className="text-[#219b3b]" /> },
 ];
 
 const formations = [
   {
-    title: "Licence Informatique",
-    institution: "Université de Paris",
-    period: "2022 - 2025",
+    title: "Licence DEVIA FULLSTACK",
+    institution: "EPSI Nantes",
+    period: "2024 - 2025",
     status: "En cours",
     description:
       "Formation complète en informatique avec spécialisation en développement web",
   },
   {
-    title: "Certification React",
-    institution: "OpenClassrooms",
+    title: "Bachelor chef de projet digital",
+    institution: "ESD - Ecole Supérieure du Digital",
     period: "2023",
     status: "Certifié",
     description:
       "Maîtrise approfondie de React et de l'écosystème moderne JavaScript",
   },
   {
-    title: "Formation UI/UX Design",
-    institution: "Udemy",
+    title: "BAC STI2D OPTION SIN",
+    institution: "Lycée Brequigny",
     period: "2022",
     status: "Complété",
     description: "Principes de design d'interface et d'expérience utilisateur",
@@ -67,16 +88,17 @@ const formations = [
 
 const projects = [
   {
-    title: "Portfolio Créatif",
-    description: "Site portfolio personnel avec animations modernes",
-    tech: ["Next.js", "Framer Motion", "TailwindCSS"],
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Knowly App",
+    description: "Applications web de ventes de cours et de leçons en ligne",
+    tech: ["Next.js", "Reddis", "TailwindCSS", "Stripe"],
+    image: "/image-fond-app-knowly.PNG",
   },
   {
-    title: "Boutique Shopify",
-    description: "E-commerce personnalisé avec intégrations avancées",
-    tech: ["Shopify", "Liquid", "JavaScript"],
-    image: "/placeholder.svg?height=200&width=300",
+    title: "BiblioTech App",
+    description:
+      "Gestionnaire de livre en ligne avec système de prêt et de retour",
+    tech: ["Angular", "MySQL", "TailwindCSS"],
+    image: "/image-fond-app-bibliotech.png",
   },
   {
     title: "Blog WordPress",
@@ -100,7 +122,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <Badge
                     variant="outline"
-                    className="w-fit border-orange-500 text-orange-400"
+                    className="w-fit border-orange-500 text-white"
                   >
                     <Calendar className="w-3 h-3 mr-1" />
                     Disponible pour de nouveaux projets
@@ -193,30 +215,32 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Technologies Section */}
-        <section className="py-12 px-2 sm:px-4">
+        <section className="py-12 px-4 flex align-middle mb-[5rem]">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white dark:text-white">
                 Technologies & Outils
               </h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
+              <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
                 Les technologies que j'utilise quotidiennement pour créer des
-                expériences web modernes
+                expériences web modernes.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 justify-items-center items-center">
+            <div
+              className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6
+        "
+            >
               {technologies.map((tech, index) => (
                 <Card
                   key={index}
-                  className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-[#181818] border-gray-800 flex items-center justify-center w-[110px] xs:w-[120px] sm:w-[140px]"
+                  className="group bg-black border border-gray-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center w-[180px] h-[110px] min-w-[100px]"
                 >
-                  <CardContent className="p-6 flex flex-col items-center justify-center text-center">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                  <CardContent className="aspect-square p-4 flex flex-col items-center justify-center text-center">
+                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
                       {tech.icon}
                     </div>
-                    <p className="text-sm font-medium text-white text-center">
+                    <p className="text-sm font-medium text-white">
                       {tech.name}
                     </p>
                   </CardContent>
@@ -226,69 +250,17 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Education Section */}
-        <section className="py-12 px-2 sm:px-4 bg-[#181818]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4 flex items-center justify-center gap-2 text-white">
-                <GraduationCap className="w-8 h-8 text-orange-500" />
-                Formations
-              </h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                Mon parcours académique et professionnel dans le développement
-                web
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {formations.map((formation, index) => (
-                <Card
-                  key={index}
-                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-l-4 border-l-orange-500 bg-[#101010] border-gray-800"
-                >
-                  <CardHeader>
-                    <div className="flex justify-between items-start mb-2">
-                      <Badge
-                        variant={
-                          formation.status === "En cours"
-                            ? "default"
-                            : "secondary"
-                        }
-                        className={
-                          formation.status === "En cours"
-                            ? "bg-orange-500 text-white"
-                            : "bg-gray-700 text-white"
-                        }
-                      >
-                        {formation.status}
-                      </Badge>
-                      <span className="text-sm text-gray-400 font-medium">
-                        {formation.period}
-                      </span>
-                    </div>
-                    <CardTitle className="group-hover:text-orange-500 transition-colors text-white">
-                      {formation.title}
-                    </CardTitle>
-                    <CardDescription className="flex items-center gap-1 text-gray-400">
-                      <MapPin className="w-3 h-3" />
-                      {formation.institution}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-400 leading-relaxed">
-                      {formation.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Projects Preview Section */}
-        <section className="py-12 px-2 sm:px-4 bg-white">
+        <section className="py-12 px-2 sm:px-4 bg-white h-[45rem] flex align-middle ">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
+              <Badge
+                variant="outline"
+                className="w-fit border-orange-500 text-orange-400 mb-4"
+              >
+                <Calendar className="w-3 h-3 mr-1" />
+                Disponible pour de nouveaux projets
+              </Badge>
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
                 Aperçu de mes réalisations
               </h2>
@@ -349,7 +321,7 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="group bg-transparent border-gray-700 text-black hover:border-orange-500"
+                className="group bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
               >
                 Voir tous mes projets
                 <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -358,13 +330,71 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="py-12 px-2 sm:px-4 bg-[#000000] h-[30rem]">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 flex items-center justify-center gap-2 text-white">
+                <GraduationCap className="w-8 h-8 text-orange-500" />
+                Formations
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Mon parcours académique et professionnel dans le développement
+                web
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {formations.map((formation, index) => (
+                <Card
+                  key={index}
+                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-l-4 border-l-orange-500 bg-[#101010] border-gray-800"
+                >
+                  <CardHeader>
+                    <div className="flex justify-between items-start mb-2">
+                      <Badge
+                        variant={
+                          formation.status === "En cours"
+                            ? "default"
+                            : "secondary"
+                        }
+                        className={
+                          formation.status === "En cours"
+                            ? "bg-orange-500 text-white"
+                            : "bg-gray-700 text-white"
+                        }
+                      >
+                        {formation.status}
+                      </Badge>
+                      <span className="text-sm text-gray-400 font-medium">
+                        {formation.period}
+                      </span>
+                    </div>
+                    <CardTitle className="group-hover:text-orange-500 transition-colors text-white">
+                      {formation.title}
+                    </CardTitle>
+                    <CardDescription className="flex items-center gap-1 text-gray-400">
+                      <MapPin className="w-3 h-3" />
+                      {formation.institution}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-gray-400 leading-relaxed">
+                      {formation.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-16 px-2 sm:px-4 bg-gradient-to-r from-orange-500/10 to-yellow-500/10">
+        <section className="py-16 px-2 sm:px-4 bg-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-black">
               Prêt à collaborer sur votre prochain projet ?
             </h2>
-            <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-black mb-8 max-w-2xl mx-auto">
               Je suis toujours ouvert aux nouvelles opportunités et aux projets
               passionnants. N'hésitez pas à me contacter pour discuter de vos
               idées.
@@ -380,7 +410,7 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-gray-700 text-white hover:border-orange-500"
+                className=" text-white hover:border-orange-500 bg-[#000000]"
               >
                 Télécharger mon CV
               </Button>
@@ -388,6 +418,7 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
+      <FooterComponent />
     </>
   );
 }

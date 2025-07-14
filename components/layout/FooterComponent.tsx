@@ -1,0 +1,139 @@
+import { Github, Mail } from "lucide-react";
+import { Button } from "../ui/button";
+
+export default function FooterComponent() {
+  return (
+    <footer className="bg-black border-t  py-12 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div className="space-y-4">
+            <a href="/">
+              <img
+                src="logo.png"
+                alt="Logo"
+                className="w-auto h-auto scale-125 object-contain"
+              />
+            </a>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Développeur front-end passionné, créateur d'expériences web
+              modernes et performantes.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="font-semibold text-white">Navigation</h3>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <a
+                  href="/"
+                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm"
+                >
+                  Accueil
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/service"
+                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/realisations"
+                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm flex items-center"
+                >
+                  Réalisations
+                  <span className="text-orange-500 text-base font-bold ml-1">
+                    .
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/propos"
+                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm"
+                >
+                  À propos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="font-semibold text-white">Services</h3>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <span className="text-slate-400 text-sm">
+                  Développement Web
+                </span>
+              </li>
+              <li>
+                <span className="text-slate-400 text-sm">UI/UX Design</span>
+              </li>
+              <li>
+                <span className="text-slate-400 text-sm">
+                  Applications Mobile
+                </span>
+              </li>
+              <li>
+                <span className="text-slate-400 text-sm">Consultation</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="font-semibold text-white">Contact</h3>
+            <div className="space-y-3">
+              <Button
+                size="sm"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 w-full"
+              >
+                <Mail className="w-3 h-3 mr-2" />
+                Me contacter
+              </Button>
+              <div className="flex gap-2">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="flex-1 border-slate-600 text-slate-400 hover:text-white hover:border-orange-500 bg-transparent"
+                >
+                  <Github className="w-3 h-3" />
+                </Button>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="flex-1 border-slate-600 text-slate-400 hover:text-white hover:border-orange-500 bg-transparent"
+                >
+                  LinkedIn
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-slate-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-slate-400 text-sm">
+              © 2024 Bakou Touré. Tous droits réservés.
+            </p>
+            <div className="flex items-center gap-4 text-sm text-slate-400">
+              <span>Fait avec ❤️ en France</span>
+              <span>•</span>
+              <span>Next.js & TailwindCSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

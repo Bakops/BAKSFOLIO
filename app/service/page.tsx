@@ -1,3 +1,5 @@
+import FooterComponent from "@/components/layout/FooterComponent";
+import HeaderComponent from "@/components/layout/HeaderComponent";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 import {
   ArrowRight,
   Calendar,
@@ -222,279 +225,312 @@ const faqs = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 dark:from-orange-500/5 dark:to-yellow-500/5" />
-        <div className="relative max-w-6xl mx-auto text-center">
-          <Badge variant="outline" className="mb-6">
-            <Zap className="w-3 h-3 mr-1" />
-            Services de développement
-          </Badge>
-
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
-            Mes Services
-          </h1>
-
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            Je transforme vos idées en solutions digitales modernes et
-            performantes. Du concept à la mise en ligne, je vous accompagne dans
-            tous vos projets web.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600"
+    <>
+      <HeaderComponent />
+      <div className="min-h-screen bg-[#101010] text-white">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 pt-[10rem] px-4">
+          <div className="absolute inset-0 bg-black" />
+          <div className="relative max-w-6xl mx-auto text-center">
+            <Badge
+              variant="outline"
+              className="mb-6 text-white border-orange-500"
             >
-              <Calendar className="w-4 h-4 mr-2" />
-              Planifier un appel
-            </Button>
-            <Button size="lg" variant="outline">
-              Voir mes réalisations
-            </Button>
-          </div>
-        </div>
-      </section>
+              <Zap className="w-3 h-3 mr-1" />
+              Services de développement
+            </Badge>
 
-      {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              Ce que je peux faire pour vous
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Des services complets pour répondre à tous vos besoins en
-              développement web
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white">
+              Mes Services
+            </h1>
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Je transforme vos idées en solutions digitales modernes et
+              performantes. Du concept à la mise en ligne, je vous accompagne
+              dans tous vos projets web.
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
+              >
+                <Calendar className="w-4 h-4 mr-2" />
+                Planifier un appel
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-gray-700 text-white hover:border-orange-500"
+              >
+                Voir mes réalisations
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-white">
+                Ce que je peux faire pour vous
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Des services complets pour répondre à tous vos besoins en
+                développement web
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <Card
+                    key={index}
+                    className={`group relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-[#181818] border-gray-800 ${
+                      service.popular
+                        ? "ring-2 ring-orange-500/20 border-orange-500/30"
+                        : ""
+                    }`}
+                  >
+                    {service.popular && (
+                      <Badge className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-white">
+                        Populaire
+                      </Badge>
+                    )}
+
+                    <CardHeader>
+                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="w-6 h-6 text-orange-500" />
+                      </div>
+                      <CardTitle className="group-hover:text-orange-500 transition-colors text-white">
+                        {service.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-400">
+                        {service.description}
+                      </CardDescription>
+                    </CardHeader>
+
+                    <CardContent className="space-y-4">
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li
+                            key={featureIndex}
+                            className="flex items-center gap-2 text-sm text-gray-300"
+                          >
+                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="pt-4 border-t border-gray-700">
+                        <div className="flex items-center justify-between">
+                          <span className="text-2xl font-bold text-orange-500">
+                            {service.price}
+                          </span>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            className="group-hover:bg-orange-500 group-hover:text-white transition-colors bg-transparent border-gray-700 text-white hover:border-orange-500"
+                          >
+                            En savoir plus
+                            <ArrowRight className="w-3 h-3 ml-1" />
+                          </Button>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-16 px-4 bg-[#181818]">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-white">
+                Mon processus de travail
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Une méthodologie éprouvée pour garantir le succès de votre
+                projet
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {process.map((step, index) => {
+                const IconComponent = step.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-[#101010] border-gray-800"
+                  >
+                    <CardHeader>
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center text-white font-bold">
+                          {step.step}
+                        </div>
+                        <div className="w-10 h-10 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-lg flex items-center justify-center">
+                          <IconComponent className="w-5 h-5 text-orange-500" />
+                        </div>
+                      </div>
+                      <CardTitle className="group-hover:text-orange-500 transition-colors text-white">
+                        {step.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-400">
+                        {step.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex items-center gap-2 text-sm text-gray-400">
+                        <Clock className="w-4 h-4" />
+                        {step.duration}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-white">
+                Packages & Tarifs
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Des solutions adaptées à tous les budgets et tous les besoins
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {packages.map((pkg, index) => (
                 <Card
                   key={index}
-                  className={`group relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${
-                    service.popular
-                      ? "ring-2 ring-orange-500/20 border-orange-500/30"
+                  className={`group relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-[#181818] border-gray-800 ${
+                    pkg.popular
+                      ? "ring-2 ring-orange-500 border-orange-500 scale-105"
                       : ""
                   }`}
                 >
-                  {service.popular && (
-                    <Badge className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-yellow-500">
-                      Populaire
-                    </Badge>
+                  {pkg.popular && (
+                    <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-orange-500 to-yellow-500 text-white text-center py-2 text-sm font-medium">
+                      Le plus populaire
+                    </div>
                   )}
 
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="w-6 h-6 text-orange-500" />
-                    </div>
-                    <CardTitle className="group-hover:text-orange-500 transition-colors">
-                      {service.title}
+                  <CardHeader className={pkg.popular ? "pt-12" : ""}>
+                    <CardTitle className="text-2xl text-white">
+                      {pkg.name}
                     </CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
+                    <div className="text-3xl font-bold text-orange-500 mb-2">
+                      {pkg.price}
+                    </div>
+                    <CardDescription className="text-gray-400">
+                      {pkg.description}
+                    </CardDescription>
                   </CardHeader>
 
-                  <CardContent className="space-y-4">
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
+                  <CardContent className="space-y-6">
+                    <ul className="space-y-3">
+                      {pkg.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
-                          className="flex items-center gap-2 text-sm"
+                          className="flex items-center gap-3 text-gray-300"
                         >
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                          {feature}
+                          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="pt-4 border-t">
-                      <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-orange-500">
-                          {service.price}
-                        </span>
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          className="group-hover:bg-orange-500 group-hover:text-white transition-colors bg-transparent"
-                        >
-                          En savoir plus
-                          <ArrowRight className="w-3 h-3 ml-1" />
-                        </Button>
-                      </div>
-                    </div>
+                    <Button
+                      className={`w-full ${
+                        pkg.popular
+                          ? "bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
+                          : "border-gray-700 text-white hover:border-orange-500"
+                      }`}
+                      variant={pkg.popular ? "default" : "outline"}
+                    >
+                      {pkg.cta}
+                    </Button>
                   </CardContent>
                 </Card>
-              );
-            })}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Process Section */}
-      <section className="py-16 px-4 bg-background/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              Mon processus de travail
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Une méthodologie éprouvée pour garantir le succès de votre projet
-            </p>
-          </div>
+        {/* FAQ Section */}
+        <section className="py-16 px-4 bg-[#181818]">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-white">
+                Questions fréquentes
+              </h2>
+              <p className="text-gray-400">
+                Les réponses aux questions les plus courantes sur mes services
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {process.map((step, index) => {
-              const IconComponent = step.icon;
-              return (
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
                 <Card
                   key={index}
-                  className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className="hover:shadow-md transition-shadow bg-[#101010] border-gray-800"
                 >
                   <CardHeader>
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center text-white font-bold">
-                        {step.step}
-                      </div>
-                      <div className="w-10 h-10 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-5 h-5 text-orange-500" />
-                      </div>
-                    </div>
-                    <CardTitle className="group-hover:text-orange-500 transition-colors">
-                      {step.title}
+                    <CardTitle className="text-lg text-white">
+                      {faq.question}
                     </CardTitle>
-                    <CardDescription>{step.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Clock className="w-4 h-4" />
-                      {step.duration}
-                    </div>
+                    <p className="text-gray-400">{faq.answer}</p>
                   </CardContent>
                 </Card>
-              );
-            })}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Packages & Tarifs</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Des solutions adaptées à tous les budgets et tous les besoins
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-orange-500/10 to-yellow-500/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-white">
+              Prêt à donner vie à votre projet ?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              Discutons de vos besoins et trouvons ensemble la solution parfaite
+              pour votre entreprise.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <Card
-                key={index}
-                className={`group relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${
-                  pkg.popular
-                    ? "ring-2 ring-orange-500 border-orange-500 scale-105"
-                    : ""
-                }`}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
               >
-                {pkg.popular && (
-                  <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-orange-500 to-yellow-500 text-white text-center py-2 text-sm font-medium">
-                    Le plus populaire
-                  </div>
-                )}
-
-                <CardHeader className={pkg.popular ? "pt-12" : ""}>
-                  <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                  <div className="text-3xl font-bold text-orange-500 mb-2">
-                    {pkg.price}
-                  </div>
-                  <CardDescription>{pkg.description}</CardDescription>
-                </CardHeader>
-
-                <CardContent className="space-y-6">
-                  <ul className="space-y-3">
-                    {pkg.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center gap-3"
-                      >
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Button
-                    className={`w-full ${
-                      pkg.popular
-                        ? "bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600"
-                        : ""
-                    }`}
-                    variant={pkg.popular ? "default" : "outline"}
-                  >
-                    {pkg.cta}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                <Mail className="w-4 h-4 mr-2" />
+                Demander un devis gratuit
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-gray-700 text-white hover:border-orange-500"
+              >
+                <Calendar className="w-4 h-4 mr-2" />
+                Planifier un appel
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 px-4 bg-background/50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Questions fréquentes</h2>
-            <p className="text-muted-foreground">
-              Les réponses aux questions les plus courantes sur mes services
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-lg">{faq.question}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{faq.answer}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 dark:from-orange-500/5 dark:to-yellow-500/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Prêt à donner vie à votre projet ?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Discutons de vos besoins et trouvons ensemble la solution parfaite
-            pour votre entreprise.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600"
-            >
-              <Mail className="w-4 h-4 mr-2" />
-              Demander un devis gratuit
-            </Button>
-            <Button size="lg" variant="outline">
-              <Calendar className="w-4 h-4 mr-2" />
-              Planifier un appel
-            </Button>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+      <FooterComponent />
+    </>
   );
 }
