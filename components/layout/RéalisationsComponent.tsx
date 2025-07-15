@@ -35,12 +35,12 @@ const projects = [
 export default function RéalisationsComponent() {
   return (
     <>
-      <section className="py-12 px-2 sm:px-4 bg-white h-[45rem] flex align-middle ">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <Badge
               variant="outline"
-              className="w-fit border-orange-500 text-orange-400 mb-4"
+              className="w-fit border-orange-500 text-orange-400 mb-4 mx-auto"
             >
               <Calendar className="w-3 h-3 mr-1" />
               Disponible pour de nouveaux projets
@@ -48,13 +48,13 @@ export default function RéalisationsComponent() {
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
               Aperçu de mes réalisations
             </h2>
-            <p className="text-gray-700 max-w-2xl mx-auto">
+            <p className="text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
               Quelques projets qui illustrent mes compétences et ma passion pour
               le développement
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <Card
                 key={index}
@@ -64,9 +64,9 @@ export default function RéalisationsComponent() {
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    width={300}
-                    height={200}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={500}
+                    height={300}
+                    className="w-full h-48 sm:h-52 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <Button
@@ -77,10 +77,10 @@ export default function RéalisationsComponent() {
                   </Button>
                 </div>
                 <CardHeader>
-                  <CardTitle className="group-hover:text-orange-500 transition-colors text-black">
+                  <CardTitle className="group-hover:text-orange-500 transition-colors text-black text-base sm:text-lg">
                     {project.title}
                   </CardTitle>
-                  <CardDescription className="text-gray-700">
+                  <CardDescription className="text-gray-700 text-sm sm:text-base">
                     {project.description}
                   </CardDescription>
                 </CardHeader>

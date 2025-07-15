@@ -13,7 +13,6 @@ import {
   Calendar,
   ExternalLink,
   GraduationCap,
-  Link,
   Mail,
   MapPin,
 } from "lucide-react";
@@ -114,10 +113,11 @@ export default function AboutPage() {
       <HeaderComponent />
       <div className="min-h-screen bg-[#101010] text-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-14 px-2 sm:px-4">
-          <div className="absolute inset-0 bg-gradient-to-r" />
-          <div className="relative max-w-6xl mx-auto mt-[8rem]">
+        <section className="relative overflow-hidden py-14 px-4 sm:px-6 lg:px-8 bg-black">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a]" />
+          <div className="relative max-w-6xl mx-auto mt-16 sm:mt-20 lg:mt-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              {/* Texte & Boutons */}
               <div className="space-y-8">
                 <div className="space-y-4">
                   <Badge
@@ -127,9 +127,11 @@ export default function AboutPage() {
                     <Calendar className="w-3 h-3 mr-1" />
                     Disponible pour de nouveaux projets
                   </Badge>
+
                   <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white">
                     À propos de moi
                   </h1>
+
                   <div className="space-y-4 text-base sm:text-lg text-gray-300 leading-relaxed">
                     <p>
                       Je m'appelle{" "}
@@ -159,42 +161,44 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
+                {/* Boutons */}
+                <div className="flex flex-wrap gap-4">
+                  <a href="https://cal.com/bakou-toure/30min" target="_blank">
+                    <Button
+                      size="lg"
+                      className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
+                    >
+                      <Mail className="w-4 h-4 mr-2" />
+                      Me contacter
+                    </Button>
+                  </a>
+
+                  <a href="https://github.com/Bakops" target="_blank">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="border-gray-700 bg-white bg-opacity-10 text-white hover:border-orange-500"
+                    >
+                      GitHub
+                    </Button>
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/toure-bakou-a2b05921a/"
+                    target="_blank"
                   >
-                    <Mail
-                      className="w-4 h-4 mr-2"
-                      href="https://cal.com/bakou-toure/30min"
-                    />
-                    Me contacter
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-gray-700 bg-[#f4f4f4] bg-opacity-20 text-white hover:border-orange-500"
-                  >
-                    <Link
-                      className="w-4 h-4 mr-2"
-                      href="https://github.com/Bakops"
-                    />
-                    GitHub
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-gray-700 bg-[#f4f4f4] bg-opacity-20 text-white hover:border-orange-500"
-                  >
-                    <Link
-                      className="w-4 h-4 mr-2"
-                      href="https://www.linkedin.com/in/toure-bakou-a2b05921a/"
-                    />
-                    LinkedIn
-                  </Button>
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="border-gray-700 bg-white bg-opacity-10 text-white hover:border-orange-500"
+                    >
+                      LinkedIn
+                    </Button>
+                  </a>
                 </div>
               </div>
 
+              {/* Image */}
               <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-3xl blur-xl opacity-30 animate-pulse" />
@@ -205,7 +209,7 @@ export default function AboutPage() {
                         alt="Bakou Touré"
                         width={320}
                         height={400}
-                        className="rounded-2xl object-cover"
+                        className="rounded-2xl object-cover w-full h-auto"
                       />
                     </div>
                   </div>
@@ -250,12 +254,12 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-12 px-2 sm:px-4 bg-white h-[45rem] flex align-middle ">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
               <Badge
                 variant="outline"
-                className="w-fit border-orange-500 text-orange-400 mb-4"
+                className="w-fit border-orange-500 text-orange-400 mb-4 mx-auto"
               >
                 <Calendar className="w-3 h-3 mr-1" />
                 Disponible pour de nouveaux projets
@@ -263,13 +267,13 @@ export default function AboutPage() {
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
                 Aperçu de mes réalisations
               </h2>
-              <p className="text-gray-700 max-w-2xl mx-auto">
+              <p className="text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
                 Quelques projets qui illustrent mes compétences et ma passion
                 pour le développement
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
                 <Card
                   key={index}
@@ -279,9 +283,9 @@ export default function AboutPage() {
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
-                      width={300}
-                      height={200}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={500}
+                      height={300}
+                      className="w-full h-48 sm:h-52 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <Button
@@ -292,10 +296,10 @@ export default function AboutPage() {
                     </Button>
                   </div>
                   <CardHeader>
-                    <CardTitle className="group-hover:text-orange-500 transition-colors text-black">
+                    <CardTitle className="group-hover:text-orange-500 transition-colors text-black text-base sm:text-lg">
                       {project.title}
                     </CardTitle>
-                    <CardDescription className="text-gray-700">
+                    <CardDescription className="text-gray-700 text-sm sm:text-base">
                       {project.description}
                     </CardDescription>
                   </CardHeader>
@@ -329,7 +333,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-12 px-2 sm:px-4 bg-[#000000] h-[30rem]">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-black">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 flex items-center justify-center gap-2 text-white">
