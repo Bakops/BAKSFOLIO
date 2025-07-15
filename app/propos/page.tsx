@@ -250,7 +250,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Projects Preview Section */}
         <section className="py-12 px-2 sm:px-4 bg-white h-[45rem] flex align-middle ">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
@@ -388,7 +387,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="py-16 px-2 sm:px-4 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-black">
