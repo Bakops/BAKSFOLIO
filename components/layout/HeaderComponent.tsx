@@ -31,9 +31,9 @@ export default function HeaderComponent() {
         <div className="flex justify-center items-center ml-2 sm:ml-4 text-xl font-bold w-[8rem] sm:w-[12rem] h-[70px] sm:h-[95px]">
           <Link href="/">
             <img
-              src="logo.png"
+              src="logo-portfolio-bakou.PNG"
               alt="Logo"
-              className="w-auto h-auto scale-125 object-contain"
+              className="w-auto h-auto scale-115 object-contain"
             />
           </Link>
         </div>
@@ -44,7 +44,9 @@ export default function HeaderComponent() {
             <li>
               <Link
                 href="/"
-                className="menu-link font-Poppins font-bold text-[14px]"
+                className={`menu-link font-Poppins font-bold text-[14px] ${
+                  scrolled ? "scrolled-hover" : ""
+                }`}
               >
                 Accueil
               </Link>
@@ -89,7 +91,7 @@ export default function HeaderComponent() {
           <Link
             href="https://cal.com/bakou-toure/30min"
             title="Prendre un rendez-vous"
-            className="inline-flex gap-2 items-center justify-center py-1.5 px-4 text-sm font-medium text-[#FFF] bg-[#f4f4f4] bg-opacity-20 backdrop-blur-xl rounded-md transition-all duration-200 border-b-2 border-transparent hover:bg-[#c3cc50] hover:text-[#FFF] hover:bg-opacity-20 hover:backdrop-blur-xl"
+            className="inline-flex gap-2 items-center justify-center py-1.5 px-4 text-sm font-medium bg-white rounded-md transition-all duration-200 border-b-2 border-transparent  bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text"
           >
             Contactez moi
             <svg

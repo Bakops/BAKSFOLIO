@@ -41,7 +41,7 @@ body {
     transform: translateY(-50%);
     width: 0px;
     height: 0px;
-    background-color: #fa9f18;
+    background-color: #fff;
     border-radius: 50%;
     transition: width 0.3s ease, height 0.3s ease;
   }

@@ -9,9 +9,9 @@ export default function FooterComponent() {
           <div className="space-y-4">
             <a href="/">
               <img
-                src="logo.png"
+                src="logo-portfolio-bakou.PNG"
                 alt="Logo"
-                className="w-auto h-auto scale-125 object-contain"
+                className="w-auto h-auto scale-90 object-contain"
               />
             </a>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -26,7 +26,7 @@ export default function FooterComponent() {
               <li>
                 <a
                   href="/"
-                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm"
+                  className="menu-link text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm"
                 >
                   Accueil
                 </a>
@@ -34,7 +34,7 @@ export default function FooterComponent() {
               <li>
                 <a
                   href="/service"
-                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm"
+                  className="menu-link text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm"
                 >
                   Services
                 </a>
@@ -42,7 +42,7 @@ export default function FooterComponent() {
               <li>
                 <a
                   href="/realisations"
-                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm flex items-center"
+                  className="menu-link text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm"
                 >
                   Réalisations
                   <span className="text-orange-500 text-base font-bold ml-1">
@@ -53,7 +53,7 @@ export default function FooterComponent() {
               <li>
                 <a
                   href="/propos"
-                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm"
+                  className="menu-link text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm"
                 >
                   À propos
                 </a>
@@ -61,7 +61,7 @@ export default function FooterComponent() {
               <li>
                 <a
                   href="/contact"
-                  className="text-slate-400 hover:text-orange-500 transition-colors font-medium text-sm"
+                  className="menu-link text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm"
                 >
                   Contact
                 </a>
@@ -73,20 +73,24 @@ export default function FooterComponent() {
             <h3 className="font-semibold text-white">Services</h3>
             <ul className="flex flex-col gap-3">
               <li>
-                <span className="text-slate-400 text-sm">
+                <span className="menu-link text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm">
                   Développement Web
                 </span>
               </li>
               <li>
-                <span className="text-slate-400 text-sm">UI/UX Design</span>
+                <span className="menu-link text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm">
+                  UI/UX Design
+                </span>
               </li>
               <li>
-                <span className="text-slate-400 text-sm">
+                <span className="menu-link text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm">
                   Applications Mobile
                 </span>
               </li>
               <li>
-                <span className="text-slate-400 text-sm">Consultation</span>
+                <span className="menu-link text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm">
+                  Consultation
+                </span>
               </li>
             </ul>
           </div>
