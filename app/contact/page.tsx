@@ -162,7 +162,7 @@ export default function ContactPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-orange-200 text-orange-700 hover:bg-orange-50 bg-transparent"
+                className="border-white text-white hover:bg-orange-50 bg-transparent"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Envoyer un email
