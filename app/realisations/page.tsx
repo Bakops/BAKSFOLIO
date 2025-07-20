@@ -11,20 +11,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
-  ArrowRight,
   Award,
   Briefcase,
   Calendar,
   Code2,
-  ExternalLink,
   Github,
   Globe,
-  Mail,
   Palette,
   Search,
   ShoppingCart,
   Smartphone,
   Users,
+  Zap,
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -36,33 +34,30 @@ const categories = [
   { id: "webapp", name: "Web App", icon: Code2 },
   { id: "mobile", name: "Mobile", icon: Smartphone },
   { id: "design", name: "UI/UX", icon: Palette },
+  { id: "api", name: "API", icon: Code2 },
+  { id: "ai", name: "Modèle IA", icon: Zap },
 ];
 
 const projects = [
   {
     id: 1,
-    title: "Boutique Mode Luxe",
-    description:
-      "E-commerce haut de gamme avec expérience d'achat premium et intégration Shopify avancée",
-    category: "ecommerce",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["Next.js", "Shopify", "TailwindCSS", "Framer Motion"],
+    title: "Knowly App",
+    description: "Applications web de ventes de cours et de leçons en ligne",
+    category: "webapp",
+    image: "/image-fond-app-knowly.PNG",
+    technologies: ["Next.js", "Stripe", "TailwindCSS", "Reddis"],
     year: "2024",
     client: "Fashion Luxe Paris",
-    duration: "8 semaines",
+    duration: "4 semaines",
     featured: true,
     metrics: {
       conversion: "+45%",
       performance: "98/100",
       users: "10K+",
     },
-    testimonial: {
-      text: "Bakou a transformé notre vision en une boutique en ligne exceptionnelle. Les ventes ont augmenté de 45% dès le premier mois.",
-      author: "Marie Dubois",
-      role: "Directrice Marketing",
-    },
-    liveUrl: "#",
-    githubUrl: "#",
+
+    liveUrl: "https://knowly-app-front-next.vercel.app/",
+    githubUrl: "https://github.com/Bakops/Knowly-App-Front-NEXT",
   },
   {
     id: 2,
@@ -88,6 +83,36 @@ const projects = [
     },
     liveUrl: "#",
     githubUrl: "#",
+  },
+  {
+    id: 3,
+    title: "API REST E-commerce",
+    description:
+      "API complète pour plateforme e-commerce avec authentification JWT et paiements Stripe",
+    category: "api",
+    image: "/placeholder.svg?height=400&width=600",
+    technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+    year: "2024",
+    client: "Projet Open Source",
+    duration: "6 semaines",
+    featured: false,
+    liveUrl: "https://api-ecommerce-docs.vercel.app",
+    githubUrl: "https://github.com/baktoure/api-ecommerce",
+  },
+  {
+    id: 4,
+    title: "Modèle Classification IA",
+    description:
+      "Modèle d'intelligence artificielle pour classification d'images avec interface web",
+    category: "ai",
+    image: "/placeholder.svg?height=400&width=600",
+    technologies: ["Python", "TensorFlow", "FastAPI", "React"],
+    year: "2024",
+    client: "Recherche Personnelle",
+    duration: "8 semaines",
+    featured: false,
+    liveUrl: "https://ai-classifier-demo.vercel.app",
+    githubUrl: "https://github.com/baktoure/ai-image-classifier",
   },
 ];
 
@@ -117,7 +142,6 @@ export default function RealizationsPage() {
     <>
       <HeaderComponent />
       <div className="min-h-screen bg-black ">
-        {/* Hero Section */}
         <section className="relative overflow-hidden py-20 pt-[10rem] px-4">
           <div className="absolute inset-0 bg-black" />
           <div className="relative max-w-6xl mx-auto text-center">
@@ -141,9 +165,8 @@ export default function RealizationsPage() {
           </div>
         </section>
 
-        {/* All Projects */}
         <section className="py-16 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-[78rem] mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Tous mes projets</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -151,7 +174,6 @@ export default function RealizationsPage() {
               </p>
             </div>
 
-            {/* Filters */}
             <div className="flex flex-col lg:flex-row gap-6 mb-12">
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => {
@@ -184,17 +206,21 @@ export default function RealizationsPage() {
                   placeholder="Rechercher un projet..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
+                  className="w-full pl-10 pr-4 py-2 border border-slate-400 bg-white text-black rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
                 />
               </div>
             </div>
 
-            {/* Projects Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project) => (
                 <Card
                   key={project.id}
-                  className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                  onClick={() => {
+                    if (project.liveUrl && project.liveUrl !== "#") {
+                      window.open(project.liveUrl, "_blank");
+                    }
+                  }}
                 >
                   <div className="relative overflow-hidden">
                     <Image
@@ -205,22 +231,49 @@ export default function RealizationsPage() {
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="flex gap-2">
-                        <Button
-                          size="sm"
-                          className="bg-white/20 backdrop-blur-sm hover:bg-white/30"
-                        >
-                          <ExternalLink className="w-3 h-3" />
-                        </Button>
-                        <Button
-                          size="sm"
-                          className="bg-white/20 backdrop-blur-sm hover:bg-white/30"
-                        >
-                          <Github className="w-3 h-3" />
-                        </Button>
+
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="flex gap-4">
+                        {project.liveUrl && project.liveUrl !== "#" && (
+                          <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <Globe className="w-8 h-8 text-white" />
+                          </div>
+                        )}
+                        {project.githubUrl && project.githubUrl !== "#" && (
+                          <div
+                            className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              window.open(project.githubUrl, "_blank");
+                            }}
+                          >
+                            <Github className="w-8 h-8 text-white" />
+                          </div>
+                        )}
                       </div>
                     </div>
+
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="flex gap-2">
+                        {project.liveUrl && project.liveUrl !== "#" && (
+                          <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <Globe className="w-4 h-4 text-white" />
+                          </div>
+                        )}
+                        {project.githubUrl && project.githubUrl !== "#" && (
+                          <div
+                            className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              window.open(project.githubUrl, "_blank");
+                            }}
+                          >
+                            <Github className="w-4 h-4 text-white" />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
                     {project.featured && (
                       <Badge className="absolute top-4 left-4 bg-gradient-to-r from-orange-500 to-yellow-500">
                         Phare
@@ -262,19 +315,40 @@ export default function RealizationsPage() {
                         </Badge>
                       )}
                     </div>
-
                     <div className="flex items-center justify-between pt-2 border-t">
                       <span className="text-sm text-muted-foreground">
                         {project.client}
                       </span>
-                      <Button
-                        size="sm"
-                        variant="ghost"
-                        className="group-hover:text-orange-500 transition-colors"
-                      >
-                        Voir plus
-                        <ArrowRight className="w-3 h-3 ml-1" />
-                      </Button>
+                      <div className="flex gap-2">
+                        {project.liveUrl && project.liveUrl !== "#" && (
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            className="group-hover:text-orange-500 transition-colors"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              window.open(project.liveUrl, "_blank");
+                            }}
+                          >
+                            <Globe className="w-3 h-3 mr-1" />
+                            Live
+                          </Button>
+                        )}
+                        {project.githubUrl && project.githubUrl !== "#" && (
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            className="group-hover:text-orange-500 transition-colors"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              window.open(project.githubUrl, "_blank");
+                            }}
+                          >
+                            <Github className="w-3 h-3 mr-1" />
+                            Code
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -297,32 +371,6 @@ export default function RealizationsPage() {
                 </Button>
               </div>
             )}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 dark:from-orange-500/5 dark:to-yellow-500/5">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-white">
-              Votre projet sera le prochain ?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Chaque projet est unique et mérite une approche personnalisée.
-              Discutons de vos idées et créons quelque chose d'exceptionnel
-              ensemble.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Démarrer un projet
-              </Button>
-              <Button size="lg" variant="outline">
-                Voir mes services
-              </Button>
-            </div>
           </div>
         </section>
       </div>

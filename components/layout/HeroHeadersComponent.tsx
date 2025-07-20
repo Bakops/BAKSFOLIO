@@ -6,7 +6,7 @@ export default function HeroHeadersComponent() {
       <HeaderComponent />
       <div className="flex flex-col items-center bg-[#000] text-white min-h-[65vh] md:min-h-[70vh] rounded-b-3xl pb-8 pt-4 relative overflow-hidden">
         <Hero />
-        {/* Blobs d'arrière-plan responsives */}
+
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[90vw] max-w-[70rem] h-[8vh] max-h-[10rem] md:h-[12vh] bg-[#FA9F18] opacity-30 blur-[40px] md:blur-[100px] rounded-full pointer-events-none"
           style={{ zIndex: 1 }}

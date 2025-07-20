@@ -112,12 +112,10 @@ export default function AboutPage() {
     <>
       <HeaderComponent />
       <div className="min-h-screen bg-[#101010] text-white">
-        {/* Hero Section */}
         <section className="relative overflow-hidden py-14 px-4 sm:px-6 lg:px-8 bg-black">
           <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a]" />
           <div className="relative max-w-6xl mx-auto mt-16 sm:mt-20 lg:mt-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              {/* Texte & Boutons */}
               <div className="space-y-8">
                 <div className="space-y-4">
                   <Badge
@@ -161,7 +159,6 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                {/* Boutons */}
                 <div className="flex flex-wrap gap-4">
                   <a href="https://cal.com/bakou-toure/30min" target="_blank">
                     <Button
@@ -198,7 +195,6 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Image */}
               <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-3xl blur-xl opacity-30 animate-pulse" />

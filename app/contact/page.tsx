@@ -129,7 +129,6 @@ export default function ContactPage() {
     <>
       <HeaderComponent />
       <div className="min-h-screen bg-black">
-        {/* Hero Section */}
         <section className="relative overflow-hidden py-20 pt-[10rem] px-4">
           <div className="absolute inset-0 bg-black" />
           <div className="relative max-w-6xl mx-auto text-center">
@@ -138,14 +137,14 @@ export default function ContactPage() {
               className="w-fit border-orange-500 text-white mb-10"
             >
               <MessageSquare className="w-3 h-3 mr-1" />
-              Parlons de votre projet
+              Je suis à votre écoute
             </Badge>
 
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white">
               Contactez-moi
             </h1>
 
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
               Vous avez un projet en tête ? Une question ? N'hésitez pas à me
               contacter. Je serais ravi de discuter avec vous et de voir comment
               je peux vous aider à concrétiser vos idées.
@@ -171,19 +170,17 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Main Contact Section */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
               <div>
                 <div className="mb-8">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Démarrons votre projet
+                    Je suis à votre écoute
                   </h2>
                   <p className="text-gray-600 leading-relaxed">
                     Remplissez ce formulaire et je vous recontacterai dans les
-                    plus brefs délais pour discuter de votre projet en détail.
+                    plus brefs délais pour discuter avec vous.
                   </p>
                 </div>
 
@@ -275,13 +272,23 @@ export default function ContactPage() {
                       </select>
                     </div>
 
-                    <div>
+                    <div className="flex flex-col w-full">
                       <label
                         htmlFor="message"
-                        className="block text-sm font-medium text-gray-700 mb-2"
+                        className="text-sm font-medium text-gray-700 mb-2"
                       >
                         Message *
                       </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        required
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-orange-200 rounded-md focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30 transition placeholder:text-sm placeholder:text-gray-400"
+                        placeholder="Décrivez votre demande, vos besoins, vos objectifs..."
+                        rows={5}
+                      />
                     </div>
 
                     <Button
@@ -328,7 +335,7 @@ export default function ContactPage() {
                 )}
               </div>
 
-              {/* Additional Info */}
+
               <div className="space-y-8">
                 <Card className="border-orange-200">
                   <CardHeader>

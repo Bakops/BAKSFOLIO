@@ -228,7 +228,6 @@ export default function ServicesPage() {
     <>
       <HeaderComponent />
       <div className="min-h-screen bg-[#101010] text-white">
-        {/* Hero Section */}
         <section className="relative overflow-hidden py-20 pt-[10rem] px-4">
           <div className="absolute inset-0 bg-black" />
           <div className="relative max-w-6xl mx-auto text-center">
@@ -269,7 +268,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Services Grid */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -348,7 +346,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Process Section */}
         <section className="py-16 px-4 bg-[#181818]">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -398,7 +395,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Pricing Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -468,7 +464,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
         <section className="py-16 px-4 bg-[#181818]">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -500,7 +495,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-orange-500/10 to-yellow-500/10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-white">

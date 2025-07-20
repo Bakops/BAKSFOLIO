@@ -27,7 +27,6 @@ export default function HeaderComponent() {
             : "bg-[#f4f4f4] bg-opacity-20 text-white"
         } backdrop-blur-xl rounded-[20px] w-full max-w-[1200px] h-height_header gap-2`}
       >
-        {/* Logo at the beginning */}
         <div className="flex justify-center items-center ml-2 sm:ml-4 text-xl font-bold w-[8rem] sm:w-[12rem] h-[70px] sm:h-[95px]">
           <Link href="/">
             <img
@@ -38,7 +37,6 @@ export default function HeaderComponent() {
           </Link>
         </div>
 
-        {/* Menu links in the middle */}
         <nav className="hidden md:flex flex-row gap-4 sm:gap-8">
           <ul className="flex flex-row gap-4 sm:gap-8">
             <li>
@@ -106,7 +104,6 @@ export default function HeaderComponent() {
           </Link>
         </div>
 
-        {/* Hamburger menu for mobile */}
         <button
           className="flex flex-col justify-center items-center gap-1 md:hidden mr-[10px]"
           onClick={toggleMenu}
@@ -117,7 +114,6 @@ export default function HeaderComponent() {
         </button>
       </header>
 
-      {/* Full-screen menu with slide animation */}
       <div
         className={`fixed inset-0 bg-[#000]  backdrop-blur-xl text-white transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
@@ -186,7 +182,7 @@ export default function HeaderComponent() {
               </Link>
             </li>
           </ul>
-          {/* Bouton contact rendez-vous sur mobile */}
+      
           <div className="flex justify-center mt-10">
             <Link
               href="https://cal.com/bakou-toure/30min"
@@ -208,7 +204,7 @@ export default function HeaderComponent() {
               </svg>
             </Link>
           </div>
-          {/* Social media icons at the end, hidden on mobile */}
+    
           <div className="flex flex-row flex-wrap items-center justify-center mt-16">
             <a
               href=""
