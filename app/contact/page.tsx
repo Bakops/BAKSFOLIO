@@ -62,7 +62,7 @@ export default function ContactPage() {
     <>
       <HeaderComponent />
       <div className="min-h-screen bg-black">
-        <section className="relative overflow-hidden py-20 pt-[10rem] px-4">
+        <section className="relative overflow-hidden py-20 pt-[7rem] sm:pt-[10rem] px-4 sm:px-8 md:px-16">
           <div className="absolute inset-0 bg-black" />
           <div className="relative max-w-6xl mx-auto text-center">
             <Badge
@@ -73,11 +73,11 @@ export default function ContactPage() {
               Je suis à votre écoute
             </Badge>
 
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white leading-tight">
               Contactez-moi
             </h1>
 
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p className="text-sm xs:text-base sm:text-xl text-gray-300 max-w-[95vw] sm:max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed">
               Vous avez un projet en tête ? Une question ? N'hésitez pas à me
               contacter. Je serais ravi de discuter avec vous et de voir comment
               je peux vous aider à concrétiser vos idées.

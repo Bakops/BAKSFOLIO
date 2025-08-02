@@ -35,7 +35,7 @@ export default function RealizationsPage() {
     <>
       <HeaderComponent />
       <div className="min-h-screen bg-[#000000] ">
-        <section className="relative overflow-hidden py-20 pt-[10rem] px-4">
+        <section className="relative overflow-hidden py-20 pt-[7rem] sm:pt-[10rem] px-4 sm:px-8 md:px-16">
           <div className="absolute inset-0 bg-black" />
           <div className="relative max-w-6xl mx-auto text-center">
             <Badge
@@ -46,11 +46,11 @@ export default function RealizationsPage() {
               Portfolio & Réalisations
             </Badge>
 
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white bg-clip-text text-transparent">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white leading-tight">
               Mes Réalisations
             </h1>
 
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p className="text-sm xs:text-base sm:text-xl text-gray-300 max-w-[95vw] sm:max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed">
               Découvrez une sélection de mes projets les plus récents. Chaque
               réalisation reflète mon engagement pour l'excellence technique et
               l'innovation design.
@@ -58,16 +58,18 @@ export default function RealizationsPage() {
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-white">
+        <section className="py-12 sm:py-16 px-4 sm:px-8 md:px-16 bg-white">
           <div className="max-w-[78rem] mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Tous mes projets</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                Tous mes projets
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
                 Explorez l'ensemble de mes réalisations par catégorie
               </p>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-6 mb-12">
+            <div className="flex flex-col lg:flex-row gap-6 mb-8 sm:mb-12">
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => {
                   const IconComponent = category.icon;
@@ -104,7 +106,7 @@ export default function RealizationsPage() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {filteredProjects.map((project) => (
                 <Card
                   key={project.id}
@@ -250,7 +252,7 @@ export default function RealizationsPage() {
 
             {filteredProjects.length === 0 && (
               <div className="text-center py-12">
-                <div className="text-muted-foreground mb-4">
+                <div className="text-muted-foreground mb-4 text-sm sm:text-base">
                   Aucun projet trouvé pour cette recherche
                 </div>
                 <Button

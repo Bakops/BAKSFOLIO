@@ -206,9 +206,7 @@ export default function HeaderComponent() {
             </Link>
           </div>
 
-          <div className="flex flex-row flex-wrap items-center justify-center mt-16">
-            {/* Socials ... */}
-          </div>
+          <div className="flex flex-row flex-wrap items-center justify-center mt-16"></div>
           <div className="text-center text-sm text-white hover:underline mt-8">
             <a href="">
               <p>© Baks.Dev 2025 · Tous droits réservés </p>
