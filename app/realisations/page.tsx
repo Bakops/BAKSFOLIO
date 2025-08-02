@@ -13,7 +13,6 @@ import {
 import {
   Award,
   Briefcase,
-  Calendar,
   Code2,
   Github,
   Globe,
@@ -21,15 +20,14 @@ import {
   Search,
   ShoppingCart,
   Smartphone,
-  Users,
   Zap,
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
 const categories = [
-  { id: "all", name: "Tous les projets", icon: Globe },
-  { id: "ecommerce", name: "E-commerce", icon: ShoppingCart },
+  { id: "tout", name: "Tous les projets", icon: Globe },
+  { id: "site web", name: "Site web", icon: ShoppingCart },
   { id: "portfolio", name: "Portfolio", icon: Briefcase },
   { id: "webapp", name: "Web App", icon: Code2 },
   { id: "mobile", name: "Mobile", icon: Smartphone },
@@ -61,28 +59,17 @@ const projects = [
   },
   {
     id: 2,
-    title: "Dashboard Analytics SaaS",
+    title: "Bibliotech",
     description:
-      "Interface d'administration moderne pour plateforme d'analytics avec visualisations de données avancées",
+      "Applications web de gestions de livres et de cathégories en ligne ",
     category: "webapp",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["React", "TypeScript", "Chart.js", "Tailwind"],
-    year: "2024",
-    client: "DataViz Pro",
-    duration: "12 semaines",
+    image: "/image-fond-app-bibliotech.png",
+    technologies: ["Angular", "TypeScript", "CSS", "Tailwind"],
+    year: "2025",
+    duration: "1 semaines",
     featured: true,
-    metrics: {
-      users: "5K+",
-      performance: "96/100",
-      satisfaction: "4.8/5",
-    },
-    testimonial: {
-      text: "L'interface est intuitive et les performances exceptionnelles. Nos utilisateurs adorent la nouvelle expérience.",
-      author: "Thomas Martin",
-      role: "CTO",
-    },
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://epsi-tp-01-angular-seven.vercel.app/",
+    githubUrl: "https://github.com/Bakops/epsi-tp-01-ANGULAR",
   },
   {
     id: 3,
@@ -114,13 +101,6 @@ const projects = [
     liveUrl: "https://ai-classifier-demo.vercel.app",
     githubUrl: "https://github.com/baktoure/ai-image-classifier",
   },
-];
-
-const stats = [
-  { label: "Projets réalisés", value: "50+", icon: Briefcase },
-  { label: "Clients satisfaits", value: "35+", icon: Users },
-  { label: "Années d'expérience", value: "3+", icon: Calendar },
-  { label: "Taux de satisfaction", value: "98%", icon: Award },
 ];
 
 export default function RealizationsPage() {

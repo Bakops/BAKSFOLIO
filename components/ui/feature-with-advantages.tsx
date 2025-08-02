@@ -102,7 +102,7 @@ function FeatureCard({
   text: string;
 }) {
   return (
-    <div className="flex flex-row gap-3 sm:gap-4 items-start bg-white/70 rounded-xl shadow-sm p-4 transition hover:shadow-md">
+    <div className="flex flex-row gap-3 sm:gap-4 items-start bg-white/70 rounded-xl  p-4 transition ">
       <div className="flex-shrink-0">{icon}</div>
       <div className="flex flex-col gap-1">
         <p className="text-base sm:text-lg font-semibold text-[#222]">
