@@ -33,8 +33,7 @@ export default function HeaderComponent() {
           </Link>
         </div>
 
-        {/* Menu visible seulement sur desktop (lg et +) */}
-        <nav className="hidden lg:flex flex-row gap-4 sm:gap-8">
+        <nav className="hidden xl:flex flex-row gap-4 sm:gap-8">
           <ul className="flex flex-row gap-4 sm:gap-8">
             <li>
               <Link
@@ -82,8 +81,7 @@ export default function HeaderComponent() {
           </ul>
         </nav>
 
-        {/* CTA visible seulement sur desktop (lg et +) */}
-        <div className="hidden lg:flex flex-wrap items-center justify-center gap-4">
+        <div className="hidden xl:flex flex-wrap items-center justify-center gap-4">
           <Link
             href="https://cal.com/bakou-toure/30min"
             title="Prendre un rendez-vous"
@@ -102,9 +100,8 @@ export default function HeaderComponent() {
           </Link>
         </div>
 
-        {/* Burger menu visible sur mobile et tablette (md et moins) */}
         <button
-          className="flex flex-col justify-center items-center gap-1 lg:hidden mr-[10px]"
+          className="flex flex-col justify-center items-center gap-1 xl:hidden mr-[10px]"
           onClick={toggleMenu}
           aria-label="Ouvrir le menu"
         >
@@ -114,11 +111,10 @@ export default function HeaderComponent() {
         </button>
       </header>
 
-      {/* Menu mobile/tablette */}
       <div
         className={`fixed inset-0 bg-[#000] backdrop-blur-xl text-white transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-200 z-10 lg:hidden`}
+        } transition-transform duration-200 z-10 xl:hidden`}
       >
         <div className="p-6">
           <div className="flex w-full justify-end mb-6">
@@ -215,7 +211,7 @@ export default function HeaderComponent() {
           </div>
           <div className="text-center text-sm text-white hover:underline mt-8">
             <a href="">
-              <p>© BakopsDev 2025 · Tous droits réservés </p>
+              <p>© Baks.Dev 2025 · Tous droits réservés </p>
             </a>
           </div>
         </div>
