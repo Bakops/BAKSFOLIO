@@ -37,12 +37,12 @@ function Hero() {
                 <br></br>
                 des projets web
               </span>
-              <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1 min-h-[2.5em]">
+              <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-2 min-h-[2.5em]">
                 &nbsp;
                 {titles.map((title, index) => (
                   <motion.span
                     key={index}
-                    className="absolute font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent italic text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+                    className="absolute w-full font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent italic text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
                     initial={{ opacity: 0, y: "-100" }}
                     transition={{ type: "spring", stiffness: 50 }}
                     animate={
