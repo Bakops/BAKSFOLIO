@@ -1,8 +1,27 @@
 import gsap from "gsap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function CursorGsap() {
+  const [showCursor, setShowCursor] = useState(true);
+
   useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 1024) {
+        setShowCursor(false);
+      } else {
+        setShowCursor(true);
+      }
+    }
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!showCursor) return;
+
     const cursorSmall = document.querySelector(".cursor-small");
     const cursorBig = document.querySelector(".cursor-big");
 
@@ -53,7 +72,10 @@ export default function CursorGsap() {
       document.removeEventListener("mousemove", mousemoveHandler);
       document.removeEventListener("mouseleave", mouseleaveHandler);
     };
-  }, []);
+  }, [showCursor]);
+
+  if (!showCursor) return null;
+
   return (
     <>
       <div className="cursor-small fixed top-0 left-0 z-1 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#FA9F18] h-3 w-3 hidden md:block">

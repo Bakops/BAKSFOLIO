@@ -1,7 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { MoveRight } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 function Hero() {
@@ -69,13 +67,12 @@ function Hero() {
             </p>
           </div>
           <div className="flex flex-row gap-3 items-center justify-center">
-            <Button
-              size="lg"
-              variant="default"
-              className="gap-4 text-base sm:text-lg px-5 sm:px-8 py-2 sm:py-3"
+            <a
+              href="/"
+              className="rounded-md  px-3.5 py-2.5 text-sm font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Voir mes services <MoveRight className="w-4 h-4" />
-            </Button>
+              Retour à l'accueil
+            </a>
           </div>
         </div>
       </div>
