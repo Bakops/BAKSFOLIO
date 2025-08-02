@@ -4,7 +4,7 @@ export default function HeroHeadersComponent() {
   return (
     <>
       <HeaderComponent />
-      <div className="flex flex-col items-center bg-[#000] text-white min-h-[65vh] md:min-h-[70vh]  pb-8 pt-4 relative overflow-hidden">
+      <div className="flex flex-col items-center bg-[#000] text-white min-h-[65vh] md:min-h-[70vh]   pb-8 pt-4 relative overflow-hidden">
         <Hero />
 
         <div
@@ -19,11 +19,11 @@ export default function HeroHeadersComponent() {
           className="absolute bottom-0 right-1/4 w-[40vw] max-w-[20rem] h-[5vh] max-h-[8rem] md:h-[7vh] bg-[#FA9F18] opacity-20 blur-[24px] md:blur-[70px] rounded-full pointer-events-none"
           style={{ zIndex: 0 }}
         ></div>
-        <div className="mt-16 md:mt-20 flex justify-center w-full animate-bounce">
+        <div className="mt-10 md:mt-20 flex justify-center w-full animate-bounce">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
+            width="30"
+            height="30"
             fill="currentColor"
             viewBox="0 0 16 16"
             className="mx-auto"

@@ -35,7 +35,7 @@ function Hero() {
                 <br></br>
                 des projets web
               </span>
-              <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-2 min-h-[2.5em]">
+              <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-2 min-h-[1.5em]">
                 &nbsp;
                 {titles.map((title, index) => (
                   <motion.span
@@ -61,17 +61,18 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-[90vw] sm:max-w-2xl text-center text-[#FFF]">
-              Spécialisé en création de sites WordPress et Shopify,
-              développement d'applications web et design de maquettes sur Figma.
+            <p className="text-[10px] pt-[1rem] xs:text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground sm:max-w-2xl text-center text-[#FFF] mx-auto px-2 sm:px-0 font-normal">
+              Je conçois et développe des applications web modernes,
+              <br className="block sm:hidden" />
+              en alliant performance, design et expérience utilisateur.
             </p>
           </div>
           <div className="flex flex-row gap-3 items-center justify-center">
             <a
               href="/"
-              className="rounded-md  px-3.5 py-2.5 text-sm font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="rounded-md px-3.5 py-2.5 text-[12px] font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 text-white focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              Retour à l'accueil
+              Décourvir mon portfolio
             </a>
           </div>
         </div>
