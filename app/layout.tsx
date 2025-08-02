@@ -1,8 +1,9 @@
-import WhatsAppBadge from "@/components/ui/whattsappBadge";
+import GithubBadge from "@/components/ui/GithubBadge";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import WhatsAppBadge from "@/components/ui/GithubBadge";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} ${poppins.className} antialiased`}>
         {children}
-        <WhatsAppBadge />
+        <GithubBadge />
         <Script>
           {`
            (function(c,l,a,r,i,t,y){
