@@ -1,7 +1,6 @@
 "use client";
-
-import { MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { SiGithub } from "react-icons/si";
 
 export default function WhatsAppBadge() {
   const [isHovered, setIsHovered] = useState(false);
@@ -24,12 +23,12 @@ export default function WhatsAppBadge() {
         )}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        className="flex items-center justify-center w-14 h-14 bg-gray-900 hover:bg-white text-black rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         aria-label="Contactez-moi sur WhatsApp"
       >
-        <MessageCircle className="h-7 w-7" />
+        <SiGithub className="text-white" />
       </a>
     </div>
   );
