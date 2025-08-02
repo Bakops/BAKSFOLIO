@@ -10,98 +10,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Award,
-  Briefcase,
-  Code2,
-  Github,
-  Globe,
-  Palette,
-  Search,
-  ShoppingCart,
-  Smartphone,
-  Zap,
-} from "lucide-react";
+import { Award, Github, Globe, Search } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-const categories = [
-  { id: "tout", name: "Tous les projets", icon: Globe },
-  { id: "site web", name: "Site web", icon: ShoppingCart },
-  { id: "portfolio", name: "Portfolio", icon: Briefcase },
-  { id: "webapp", name: "Web App", icon: Code2 },
-  { id: "mobile", name: "Mobile", icon: Smartphone },
-  { id: "design", name: "UI/UX", icon: Palette },
-  { id: "api", name: "API", icon: Code2 },
-  { id: "ai", name: "Modèle IA", icon: Zap },
-];
-
-const projects = [
-  {
-    id: 1,
-    title: "Knowly App",
-    description: "Applications web de ventes de cours et de leçons en ligne",
-    category: "webapp",
-    image: "/image-fond-app-knowly.PNG",
-    technologies: ["Next.js", "Stripe", "TailwindCSS", "Reddis"],
-    year: "2024",
-    client: "Fashion Luxe Paris",
-    duration: "4 semaines",
-    featured: true,
-    metrics: {
-      conversion: "+45%",
-      performance: "98/100",
-      users: "10K+",
-    },
-
-    liveUrl: "https://knowly-app-front-next.vercel.app/",
-    githubUrl: "https://github.com/Bakops/Knowly-App-Front-NEXT",
-  },
-  {
-    id: 2,
-    title: "Bibliotech",
-    description:
-      "Applications web de gestions de livres et de cathégories en ligne ",
-    category: "webapp",
-    image: "/image-fond-app-bibliotech.png",
-    technologies: ["Angular", "TypeScript", "CSS", "Tailwind"],
-    year: "2025",
-    duration: "1 semaines",
-    featured: true,
-    liveUrl: "https://epsi-tp-01-angular-seven.vercel.app/",
-    githubUrl: "https://github.com/Bakops/epsi-tp-01-ANGULAR",
-  },
-  {
-    id: 3,
-    title: "API REST E-commerce",
-    description:
-      "API complète pour plateforme e-commerce avec authentification JWT et paiements Stripe",
-    category: "api",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["Node.js", "Express", "MongoDB", "JWT"],
-    year: "2024",
-    client: "Projet Open Source",
-    duration: "6 semaines",
-    featured: false,
-    liveUrl: "https://api-ecommerce-docs.vercel.app",
-    githubUrl: "https://github.com/baktoure/api-ecommerce",
-  },
-  {
-    id: 4,
-    title: "Modèle Classification IA",
-    description:
-      "Modèle d'intelligence artificielle pour classification d'images avec interface web",
-    category: "ai",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["Python", "TensorFlow", "FastAPI", "React"],
-    year: "2024",
-    client: "Recherche Personnelle",
-    duration: "8 semaines",
-    featured: false,
-    liveUrl: "https://ai-classifier-demo.vercel.app",
-    githubUrl: "https://github.com/baktoure/ai-image-classifier",
-  },
-];
+import { categories, projects } from "../data/realisation-data";
 
 export default function RealizationsPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -121,7 +34,7 @@ export default function RealizationsPage() {
   return (
     <>
       <HeaderComponent />
-      <div className="min-h-screen bg-black ">
+      <div className="min-h-screen bg-[#000000] ">
         <section className="relative overflow-hidden py-20 pt-[10rem] px-4">
           <div className="absolute inset-0 bg-black" />
           <div className="relative max-w-6xl mx-auto text-center">

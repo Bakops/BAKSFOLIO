@@ -47,10 +47,10 @@ export default function HeaderComponent() {
             </li>
             <li>
               <Link
-                href="/service"
+                href="/parcours"
                 className="menu-link font-poppins font-bold text-[14px]"
               >
-                Services
+                Parcours
               </Link>
             </li>
             <li>
@@ -147,11 +147,11 @@ export default function HeaderComponent() {
             </li>
             <li>
               <Link
-                href="/service"
+                href="/parcours"
                 className="menu-link text-2xl font-poppins font-bold"
                 onClick={toggleMenu}
               >
-                Services
+                Parcours
               </Link>
             </li>
             <li>

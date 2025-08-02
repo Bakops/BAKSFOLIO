@@ -25,7 +25,7 @@ export default function FooterComponent() {
             <ul className="flex flex-col gap-3">
               {[
                 ["Accueil", "/"],
-                ["Services", "/service"],
+                ["Parcours", "/parcours"],
                 ["Réalisations", "/realisations"],
                 ["À propos", "/propos"],
                 ["Contact", "/contact"],

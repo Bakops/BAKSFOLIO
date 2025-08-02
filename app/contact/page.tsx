@@ -12,77 +12,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-  Calendar,
-  CheckCircle,
-  Clock,
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  MessageSquare,
-  Phone,
-  Send,
-} from "lucide-react";
+import { Calendar, CheckCircle, Mail, MessageSquare, Send } from "lucide-react";
 import type React from "react";
 import { useState } from "react";
-
-const contactInfo = [
-  {
-    icon: Mail,
-    title: "Email",
-    value: "contact@baktoure.dev",
-    description: "Réponse sous 24h",
-    action: "mailto:contact@baktoure.dev",
-  },
-  {
-    icon: Phone,
-    title: "Téléphone",
-    value: "+33 6 XX XX XX XX",
-    description: "Lun-Ven 9h-18h",
-    action: "tel:+33600000000",
-  },
-  {
-    icon: MapPin,
-    title: "Localisation",
-    value: "Paris, France",
-    description: "Disponible en remote",
-    action: "#",
-  },
-  {
-    icon: Clock,
-    title: "Disponibilité",
-    value: "Lun-Ven 9h-18h",
-    description: "Réponse rapide",
-    action: "#",
-  },
-];
-
-const socialLinks = [
-  {
-    icon: Github,
-    name: "GitHub",
-    url: "https://github.com/Bakops",
-    color: "hover:text-gray-900",
-  },
-  {
-    icon: Linkedin,
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/toure-bakou-a2b05921a/",
-    color: "hover:text-blue-600",
-  },
-];
-
-const projectTypes = [
-  "Site vitrine",
-  "E-commerce",
-  "Application web",
-  "Application mobile",
-  "UI/UX Design",
-  "Consultation",
-  "Maintenance",
-  "Autre",
-];
+import { socialLinks } from "../data/contact-data";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -334,7 +267,6 @@ export default function ContactPage() {
                   </Card>
                 )}
               </div>
-
 
               <div className="space-y-8">
                 <Card className="border-orange-200">
