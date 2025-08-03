@@ -1,13 +1,3 @@
-import {
-  BookOpen,
-  Calendar,
-  Code2,
-  Globe,
-  Server,
-  Smartphone,
-  TrendingUp,
-} from "lucide-react";
-
 export const academicPath = [
   {
     period: "2024 - 2025",
@@ -33,12 +23,12 @@ export const academicPath = [
     ],
     domain: "Développement informatique",
     projects: [
-      "Application fullstack avec Spring Boot et Angular",
+      "Application fullstack de visualitions de données pandémique (COVID-19/Monkeypox)",
       "API REST avec tests automatisés complets",
-      "Application mobile Flutter avec backend Nest.js",
+      "Application mobile Flutter",
     ],
     current: false,
-    icon: Server,
+    imageUrl: "/epsi-logo.png",
   },
   {
     period: "2022 - 2024",
@@ -63,7 +53,7 @@ export const academicPath = [
       "Maquettes et prototypes sur Figma",
     ],
     current: false,
-    icon: Globe,
+    imageUrl: "/esd-logo.png",
   },
   {
     period: "2022",
@@ -72,6 +62,12 @@ export const academicPath = [
     institution: "Lycée Brequigny",
     location: "Rennes, France",
     status: "Diplômé",
+    certification: {
+      title:
+        "Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable",
+      code: "Diplôme National",
+      type: "Diplôme",
+    },
     description:
       "Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable avec spécialisation en systèmes numériques",
     highlights: [
@@ -88,46 +84,26 @@ export const academicPath = [
       "Systèmes embarqués et programmation",
     ],
     current: false,
-    icon: Smartphone,
+    imageUrl: "/logo-lycée-brequigny.png",
   },
 ];
 
 export const technicalSkills = [
-  {
-    category: "Langages Backend",
-    items: ["Java", "Python", "JavaScript/Node.js"],
-    level: "Expert",
-    color: "bg-slate-900 border-slate-700 text-slate-300",
-  },
-  {
-    category: "Frameworks Backend",
-    items: ["Spring Boot", "Django", "Nest.js"],
-    level: "Avancé",
-    color: "bg-slate-900 border-slate-700 text-slate-300",
-  },
-  {
-    category: "Frontend & Mobile",
-    items: ["Angular", "Flutter", "HTML/CSS", "SASS"],
-    level: "Avancé",
-    color: "bg-slate-900 border-slate-700 text-slate-300",
-  },
-  {
-    category: "DevOps & Tests",
-    items: ["Docker", "Tests E2E", "Tests unitaires", "Tests performance"],
-    level: "Intermédiaire",
-    color: "bg-slate-900 border-slate-700 text-slate-300",
-  },
-  {
-    category: "Design & UX",
-    items: ["UX/UI Design", "CMS", "Marketing digital"],
-    level: "Intermédiaire",
-    color: "bg-slate-900 border-slate-700 text-slate-300",
-  },
-];
-
-export const stats = [
-  { label: "Années de formation", value: "3+", icon: Calendar },
-  { label: "Projets académiques", value: "15+", icon: BookOpen },
-  { label: "Technologies maîtrisées", value: "20+", icon: Code2 },
-  { label: "Niveau d'études", value: "Bac+4", icon: TrendingUp },
+  "Java",
+  "Python",
+  "JavaScript/Node.js",
+  "Spring Boot",
+  "Django",
+  "Nest.js",
+  "Angular",
+  "Flutter",
+  "HTML/CSS",
+  "SASS",
+  "Docker",
+  "Tests E2E",
+  "Tests unitaires",
+  "Tests performance",
+  "UX/UI Design",
+  "CMS",
+  "Marketing digital",
 ];

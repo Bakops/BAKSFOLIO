@@ -18,6 +18,7 @@ import {
   MapPin,
   Target,
 } from "lucide-react";
+import Image from "next/image";
 import { academicPath, technicalSkills } from "../data/parcours-data";
 
 export default function AcademicJourneyPage() {
@@ -25,7 +26,6 @@ export default function AcademicJourneyPage() {
     <>
       <HeaderComponent />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 text-white">
-        {/* Hero Section */}
         <section className="relative overflow-hidden py-16 sm:py-20 pt-[7rem] sm:pt-[10rem] px-4 sm:px-8 md:px-16">
           <div className="absolute inset-0 bg-black" />
           <div className="relative max-w-6xl mx-auto text-center">
@@ -49,7 +49,6 @@ export default function AcademicJourneyPage() {
           </div>
         </section>
 
-        {/* Academic Timeline */}
         <section className="py-10 sm:py-16 px-4 sm:px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8 sm:mb-12">
@@ -67,24 +66,33 @@ export default function AcademicJourneyPage() {
 
               <div className="space-y-8 sm:space-y-12">
                 {academicPath.map((education, index) => {
-                  const IconComponent = education.icon;
                   return (
                     <div key={index} className="relative">
-                      {/* Timeline dot */}
-                      <div className="absolute left-2 sm:left-6 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full border-4 border-slate-50 hidden md:block" />
+                      <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full border-4 border-slate-50 hidden md:block" />
 
-                      <Card className="md:ml-10 sm:md:ml-16 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-gray-200">
+                      <Card
+                        className={`md:ml-16 group  bg-white border-gray-200`}
+                      >
                         <CardHeader>
                           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                             <div className="space-y-3 flex-1">
-                              <div className="flex items-center gap-3 flex-wrap">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-lg flex items-center justify-center">
-                                  <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500" />
+                              <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                                  <Image
+                                    src={
+                                      education.imageUrl ||
+                                      "/placeholder.svg?height=48&width=48&query=school logo"
+                                    }
+                                    alt={`${education.institution} logo`}
+                                    width={48}
+                                    height={48}
+                                    className="object-contain"
+                                  />
                                 </div>
-                                <div className="flex items-center gap-2 flex-wrap">
+                                <div className="flex items-center gap-2">
                                   <Badge
                                     variant="outline"
-                                    className="bg-gray-50 border-gray-200 text-gray-700 text-xs sm:text-sm"
+                                    className="bg-gray-50 border-gray-200 text-gray-700"
                                   >
                                     {education.period}
                                   </Badge>
@@ -106,10 +114,10 @@ export default function AcademicJourneyPage() {
                               </div>
 
                               <div>
-                                <CardTitle className="text-lg sm:text-2xl group-hover:text-orange-500 transition-colors mb-1">
+                                <CardTitle className="text-2xl group-hover:text-orange-500 transition-colors mb-1">
                                   {education.title}
                                 </CardTitle>
-                                <div className="text-xs sm:text-sm text-orange-600 font-medium mb-2">
+                                <div className="text-sm text-orange-600 font-medium mb-2">
                                   {education.level}
                                 </div>
                                 <CardDescription className="flex flex-col gap-1 text-gray-600">
@@ -125,8 +133,8 @@ export default function AcademicJourneyPage() {
                               </div>
                             </div>
 
-                            <div className="lg:text-right mt-2 lg:mt-0">
-                              <div className="text-xs sm:text-sm text-gray-600 mb-1">
+                            <div className="lg:text-right">
+                              <div className="text-sm text-gray-600 mb-1">
                                 Domaine
                               </div>
                               <Badge
@@ -139,13 +147,13 @@ export default function AcademicJourneyPage() {
                           </div>
                         </CardHeader>
 
-                        <CardContent className="space-y-4 sm:space-y-6">
-                          <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+                        <CardContent className="space-y-6">
+                          <p className="text-gray-600 leading-relaxed">
                             {education.description}
                           </p>
 
                           <div>
-                            <h4 className="font-semibold mb-2 sm:mb-3 flex items-center gap-2 text-sm sm:text-base">
+                            <h4 className="font-semibold mb-3 flex items-center gap-2">
                               <Target className="w-4 h-4 text-orange-500" />
                               Compétences développées
                             </h4>
@@ -154,7 +162,7 @@ export default function AcademicJourneyPage() {
                                 (highlight, highlightIndex) => (
                                   <div
                                     key={highlightIndex}
-                                    className="flex items-start gap-2 text-xs sm:text-sm text-gray-700"
+                                    className="flex items-start gap-2 text-sm text-gray-700"
                                   >
                                     <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                                     <span>{highlight}</span>
@@ -165,18 +173,20 @@ export default function AcademicJourneyPage() {
                           </div>
                           {education.certification && (
                             <div>
-                              <h4 className="font-semibold mb-2 sm:mb-3 flex items-center gap-2 text-sm sm:text-base">
+                              <h4 className="font-semibold mb-3 flex items-center gap-2">
                                 <Award className="w-4 h-4 text-orange-500" />
-                                Certification en cours
+                                {education.status === "En cours"
+                                  ? "Certification en cours"
+                                  : "Diplôme / Certification"}
                               </h4>
                               <Card className="bg-gray-50 border-gray-200">
-                                <CardContent className="p-3 sm:p-4">
+                                <CardContent className="p-4">
                                   <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full flex items-center justify-center">
+                                    <div className="w-10 h-10 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-full flex items-center justify-center">
                                       <Award className="w-5 h-5 text-orange-500" />
                                     </div>
                                     <div className="flex-1">
-                                      <h5 className="font-semibold text-gray-900 text-sm sm:text-base">
+                                      <h5 className="font-semibold text-gray-900">
                                         {education.certification.title}
                                       </h5>
                                       <div className="flex items-center gap-2 mt-1">
@@ -191,9 +201,11 @@ export default function AcademicJourneyPage() {
                                         </span>
                                       </div>
                                     </div>
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-orange-500 rounded-full flex items-center justify-center">
-                                      <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-                                    </div>
+                                    {education.status === "En cours" && (
+                                      <div className="w-5 h-5 border-2 border-orange-500 rounded-full flex items-center justify-center">
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+                                      </div>
+                                    )}
                                   </div>
                                 </CardContent>
                               </Card>
@@ -201,16 +213,16 @@ export default function AcademicJourneyPage() {
                           )}
 
                           <div>
-                            <h4 className="font-semibold mb-2 sm:mb-3 flex items-center gap-2 text-sm sm:text-base">
+                            <h4 className="font-semibold mb-3 flex items-center gap-2">
                               <Code2 className="w-4 h-4 text-orange-500" />
                               Projets académiques
                             </h4>
-                            <div className="space-y-1 sm:space-y-2">
+                            <div className="space-y-2">
                               {education.projects.map(
                                 (project, projectIndex) => (
                                   <div
                                     key={projectIndex}
-                                    className="flex items-center gap-2 text-xs sm:text-sm text-gray-700"
+                                    className="flex items-center gap-2 text-sm text-gray-700"
                                   >
                                     <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0" />
                                     <span>{project}</span>
@@ -229,61 +241,40 @@ export default function AcademicJourneyPage() {
           </div>
         </section>
 
-        <section className="bg-black py-10 sm:py-16 px-4 sm:px-8 md:px-16">
+        {/* Technical Skills Section */}
+        <section className="py-16 px-4 bg-black">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-2 sm:mb-4 flex items-center justify-center gap-2">
-                <Code2 className="w-7 h-7 sm:w-8 sm:h-8 text-orange-500" />
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-2">
+                <Code2 className="w-8 h-8 text-orange-500" />
                 Stack Technique Maîtrisée
               </h2>
-              <p className="text-gray-300 max-w-[95vw] sm:max-w-2xl mx-auto text-sm xs:text-base">
+              <p className="text-muted-foreground max-w-2xl mx-auto">
                 L'ensemble des technologies et compétences acquises durant ma
-                formation d'ingénieur
+                formation en développement informatique
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {technicalSkills.map((skillGroup, index) => (
-                <Card
+            <div className="flex flex-wrap justify-center gap-3">
+              {technicalSkills.map((skill, index) => (
+                <Badge
                   key={index}
-                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-gray-200"
+                  variant="outline"
+                  className="text-sm px-4 py-2 bg-gray-100 border-gray-300 text-gray-700"
                 >
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-base sm:text-lg group-hover:text-orange-500 transition-colors text-gray-900">
-                      {skillGroup.category}
-                    </CardTitle>
-                    <Badge
-                      variant="outline"
-                      className={`w-fit mx-auto ${skillGroup.color} text-xs sm:text-sm`}
-                    >
-                      {skillGroup.level}
-                    </Badge>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2 sm:space-y-3">
-                      {skillGroup.items.map((item, itemIndex) => (
-                        <div
-                          key={itemIndex}
-                          className="flex items-center gap-2 text-xs sm:text-sm p-2 rounded-lg bg-gray-100 hover:bg-orange-50 transition-colors text-gray-700"
-                        >
-                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                  {skill}
+                </Badge>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-14 sm:py-20 px-4 sm:px-8 md:px-16 bg-white text-black">
+        <section className="py-20 px-4 bg-white text-black">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Mon parcours vous intéresse ?
             </h2>
-            <p className="text-sm xs:text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-[95vw] sm:max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Découvrez comment ma formation d'ingénieur et mes compétences
               fullstack peuvent contribuer à vos projets. Discutons de vos
               besoins !
@@ -291,7 +282,7 @@ export default function AcademicJourneyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-base sm:text-lg"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Me contacter
@@ -299,7 +290,7 @@ export default function AcademicJourneyPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-white border-gray-200 text-gray-700 hover:bg-gray-100 text-base sm:text-lg"
+                className="bg-white border-gray-200 text-gray-700 hover:bg-gray-100"
               >
                 Voir mes réalisations
               </Button>
