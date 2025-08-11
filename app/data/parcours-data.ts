@@ -88,22 +88,25 @@ export const academicPath = [
   },
 ];
 
-export const technicalSkills = [
-  "Java",
-  "Python",
-  "JavaScript/Node.js",
-  "Spring Boot",
-  "Django",
-  "Nest.js",
-  "Angular",
-  "Flutter",
-  "HTML/CSS",
-  "SASS",
-  "Docker",
-  "Tests E2E",
-  "Tests unitaires",
-  "Tests performance",
-  "UX/UI Design",
-  "CMS",
-  "Marketing digital",
+export const certifications = [
+  {
+    title:
+      "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+    provider: "Oracle",
+    date: "Aout 2025",
+    status: "Obtenue",
+    description:
+      "Certification validant les compétences fondamentales en Intelligence Artificielle sur Oracle Cloud Infrastructure",
+    skills: [
+      "Oracle Cloud Infrastructure",
+      "Intelligence Artificielle",
+      "Machine Learning",
+      "Cloud Computing",
+      "AI Services",
+    ],
+    credentialId: "OCI-2025-AI-FA",
+    certficationUrl:
+      "https://www.oracle.com/learning/certification/ai-foundations-associate.html",
+    imageUrl: "/oracle-logo.jpg",
+  },
 ];

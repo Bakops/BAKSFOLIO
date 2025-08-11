@@ -70,7 +70,7 @@ function Hero() {
           <div className="flex flex-row gap-3 items-center justify-center">
             <a
               href="/"
-              className="rounded-md px-3.5 py-2.5 text-[12px] font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 text-white focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="rounded-md px-3.5 py-2.5 text-[15px] font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 text-white focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gradient-to-r hover:from-orange-600 hover:to-yellow-600 transition-colors duration-200"
             >
               Décourvir mon portfolio
             </a>
