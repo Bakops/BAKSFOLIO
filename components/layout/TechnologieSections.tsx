@@ -43,32 +43,30 @@ const technologies = [
 
 export default function TechnologieSections() {
   return (
-    <section className="py-12 px-4 flex align-middle">
+    <section className="py-14 px-8 xs:px-10 sm:px-14 md:px-24 bg-black">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-black dark:text-white">
+        <div className="text-center mb-8 sm:mb-10">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-white">
             Technologies & Outils
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto text-xs xs:text-sm sm:text-base">
             Les technologies que j'utilise quotidiennement pour créer des
             expériences web modernes.
           </p>
         </div>
-
-        <div
-          className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6
-"
-        >
+        <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
           {technologies.map((tech, index) => (
             <Card
               key={index}
-              className="group bg-black border border-gray-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center w-[180px] h-[110px] min-w-[100px]"
+              className="group bg-black border border-gray-800 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center justify-center w-full h-[84px] min-w-0"
             >
-              <CardContent className="aspect-square p-4 flex flex-col items-center justify-center text-center">
-                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+              <CardContent className="aspect-square p-3 sm:p-4 flex flex-col items-center justify-center text-center">
+                <div className="text-2xl sm:text-3xl mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">
                   {tech.icon}
                 </div>
-                <p className="text-sm font-medium text-white">{tech.name}</p>
+                <p className="text-xs xs:text-sm sm:text-base font-medium text-white">
+                  {tech.name}
+                </p>
               </CardContent>
             </Card>
           ))}

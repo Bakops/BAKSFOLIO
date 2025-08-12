@@ -1,0 +1,207 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { CheckCircle, Send } from "lucide-react";
+import { useState } from "react";
+
+export default function FormulaireComponent() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    subject: "",
+    message: "",
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    setIsSubmitted(true);
+    setIsLoading(false);
+    setFormData({
+      name: "",
+      email: "",
+      company: "",
+      subject: "",
+      message: "",
+    });
+  };
+  return (
+    <div>
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          Je suis à votre écoute
+        </h2>
+        <p className="text-gray-600 leading-relaxed">
+          Remplissez ce formulaire et je vous recontacterai dans les plus brefs
+          délais pour discuter avec vous.
+        </p>
+      </div>
+
+      {!isSubmitted ? (
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Nom complet *
+              </label>
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                required
+                value={formData.name}
+                onChange={handleInputChange}
+                className="border-orange-200 focus:border-orange-500 focus:ring-orange-500/20"
+                placeholder="Votre nom"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Email *
+              </label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={handleInputChange}
+                className="border-orange-200 focus:border-orange-500 focus:ring-orange-500/20"
+                placeholder="votre@email.com"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              htmlFor="company"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Entreprise
+            </label>
+            <Input
+              id="company"
+              name="company"
+              type="text"
+              value={formData.company}
+              onChange={handleInputChange}
+              className="border-orange-200 focus:border-orange-500 focus:ring-orange-500/20"
+              placeholder="Nom de votre entreprise (optionnel)"
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="subject"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Sujet de votre message *
+            </label>
+            <select
+              id="subject"
+              name="subject"
+              required
+              value={formData.subject}
+              onChange={handleInputChange}
+              className="w-full px-3 py-2 border border-orange-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
+            >
+              <option value="">Sélectionnez un sujet</option>
+              <option value="Renseignement">Renseignement</option>
+              <option value="Offre d'emploi">Offre d'emploi</option>
+              <option value="Demande de devis">Demande de devis</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Support technique">Support technique</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div className="flex flex-col w-full">
+            <label
+              htmlFor="message"
+              className="text-sm font-medium text-gray-700 mb-2"
+            >
+              Message *
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              value={formData.message}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 border border-orange-200 rounded-md focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30 transition placeholder:text-sm placeholder:text-gray-400"
+              placeholder="Décrivez votre demande, vos besoins, vos objectifs..."
+              rows={5}
+            />
+          </div>
+
+          <Button
+            type="submit"
+            size="lg"
+            disabled={isLoading}
+            className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white shadow-lg"
+          >
+            {isLoading ? (
+              <>
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                Envoi en cours...
+              </>
+            ) : (
+              <>
+                <Send className="w-4 h-4 mr-2" />
+                Envoyer le message
+              </>
+            )}
+          </Button>
+        </form>
+      ) : (
+        <Card className="bg-green-50 border-green-200">
+          <CardContent className="p-8 text-center">
+            <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-green-800 mb-2">
+              Message envoyé !
+            </h3>
+            <p className="text-green-700 mb-4">
+              Merci pour votre message. Je vous recontacterai dans les 24
+              heures.
+            </p>
+            <Button
+              onClick={() => setIsSubmitted(false)}
+              variant="outline"
+              className="border-green-300 text-green-700 hover:bg-green-100"
+            >
+              Envoyer un autre message
+            </Button>
+          </CardContent>
+        </Card>
+      )}
+    </div>
+  );
+}

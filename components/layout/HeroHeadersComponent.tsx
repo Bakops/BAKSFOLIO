@@ -4,7 +4,7 @@ export default function HeroHeadersComponent() {
   return (
     <>
       <HeaderComponent />
-      <div className="flex flex-col items-center shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)] bg-[#000] text-white min-h-[65vh] md:min-h-[70vh]   pb-8 pt-4 relative overflow-hidden">
+      <div className="flex flex-col items-center shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)] bg-[#000] text-white min-h-[65vh] md:min-h-[70vh] pb-8 pt-4 relative overflow-hidden px-4 sm:px-8">
         <Hero />
 
         <div

@@ -16,6 +16,7 @@ const projects = [
     description: "Applications web de ventes de cours et de leçons en ligne",
     tech: ["Next.js", "Reddis", "TailwindCSS", "Stripe"],
     image: "/image-fond-app-knowly.PNG",
+    link: "#",
   },
   {
     title: "BiblioTech App",
@@ -23,43 +24,48 @@ const projects = [
       "Gestionnaire de livre en ligne avec système de prêt et de retour",
     tech: ["Angular", "MySQL", "TailwindCSS"],
     image: "/image-fond-app-bibliotech.png",
+    link: "#",
   },
   {
     title: "Blog WordPress",
     description: "Blog moderne avec thème personnalisé",
     tech: ["WordPress", "PHP", "CSS"],
     image: "/placeholder.svg?height=200&width=300",
+    link: "#",
   },
 ];
 
 export default function RéalisationsComponent() {
   return (
-    <>
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <Badge
-              variant="outline"
-              className="w-fit border-orange-500 text-orange-400 mb-4 mx-auto"
-            >
-              <Calendar className="w-3 h-3 mr-1" />
-              Disponible pour de nouveaux projets
-            </Badge>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
-              Aperçu de mes réalisations
-            </h2>
-            <p className="text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
-              Quelques projets qui illustrent mes compétences et ma passion pour
-              le développement
-            </p>
-          </div>
+    <section className="py-14 px-8 xs:px-10 sm:px-14 md:px-24 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-10">
+          <Badge
+            variant="outline"
+            className="w-fit border-orange-500 text-black mb-4 mx-auto text-xs sm:text-sm px-3 py-1"
+          >
+            <Calendar className="w-3 h-3 mr-1" />
+            Disponible pour de nouveaux projets
+          </Badge>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
+            Aperçu de mes réalisations
+          </h2>
+          <p className="text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
+            Quelques projets qui illustrent mes compétences et ma passion pour
+            le développement
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gray-100 border-gray-300"
-              >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {projects.map((project, index) => (
+            <a
+              key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block h-full"
+            >
+              <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gray-100 border-gray-300 flex flex-col h-full">
                 <div className="relative overflow-hidden">
                   <Image
                     src={project.image || "/placeholder.svg"}
@@ -71,7 +77,7 @@ export default function RéalisationsComponent() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <Button
                     size="sm"
-                    className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-orange-500 text-white"
+                    className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-orange-500 text-white pointer-events-none"
                   >
                     <ExternalLink className="w-3 h-3" />
                   </Button>
@@ -90,7 +96,7 @@ export default function RéalisationsComponent() {
                       <Badge
                         key={techIndex}
                         variant="outline"
-                        className="text-xs border-gray-400 text-gray-800"
+                        className="text-xs sm:text-sm border-gray-400 text-gray-800"
                       >
                         {tech}
                       </Badge>
@@ -98,21 +104,21 @@ export default function RéalisationsComponent() {
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Button
-              size="lg"
-              variant="outline"
-              className="group bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
-            >
-              Voir tous mes projets
-              <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
+            </a>
+          ))}
         </div>
-      </section>
-    </>
+
+        <div className="text-center mt-10">
+          <Button
+            size="lg"
+            variant="outline"
+            className="group bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white"
+          >
+            Voir tous mes projets
+            <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
+      </div>
+    </section>
   );
 }
