@@ -19,10 +19,10 @@ import Image from "next/image";
 
 export default function ParcoursFormationComponenent() {
   return (
-    <section className="py-10 px-4 sm:px-8 md:px-16 bg-white">
+    <section className="py-14 px-4 sm:px-8 md:px-16 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-6xl text-black font-bold mb-4 flex items-center justify-center gap-2">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl text-black font-extrabold mb-4 flex items-center justify-center gap-2">
             <Award className="w-8 h-8 text-orange-500" />
             Parcours de formation
           </h2>

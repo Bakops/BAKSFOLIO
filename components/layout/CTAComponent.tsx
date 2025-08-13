@@ -5,7 +5,7 @@ export default function CTAComponent() {
   return (
     <section className="py-14 px-8 xs:px-10 sm:px-14 md:px-24 bg-white ">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-black">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-6 text-black">
           Prêt à collaborer sur votre prochain projet ?
         </h2>
         <p className="text-base sm:text-lg text-black mb-8 max-w-2xl mx-auto">

@@ -9,7 +9,7 @@ export default function CertificationsComponenent() {
     <section className="py-14 px-8 xs:px-10 sm:px-14 md:px-24 bg-black text-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-6xl text-white font-bold mb-4 flex items-center justify-center gap-2">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl text-white font-extrabold mb-4 flex items-center justify-center gap-2">
             <Award className="w-8 h-8 text-orange-500" />
             Certifications
           </h2>
