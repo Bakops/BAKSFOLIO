@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Github, Globe, Search } from "lucide-react";
+import { Calendar, Github, Globe, Search } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -31,10 +31,17 @@ export default function PortfolioSectionComponent() {
     <section className=" bg-white py-14 px-8 xs:px-10 sm:px-14 md:px-24">
       <div className="max-w-[78rem] mx-auto">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+          <Badge
+            variant="outline"
+            className="w-fit border-orange-500 text-black bg-white/80 mb-4 mx-auto text-xs sm:text-sm px-4 py-2 shadow-sm"
+          >
+            <Calendar className="w-3 h-3 mr-1" />
+            Disponible pour de nouveaux projets
+          </Badge>
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
             Tous mes projets
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
+          <p className="text-muted-foreground max-w-[95vw] sm:max-w-2xl mx-auto text-sm xs:text-base">
             Explorez l'ensemble de mes réalisations par catégorie
           </p>
         </div>

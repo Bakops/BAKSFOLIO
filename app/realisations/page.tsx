@@ -1,4 +1,5 @@
 "use client";
+import CTAComponent from "@/components/layout/CTAComponent";
 import FooterComponent from "@/components/layout/FooterComponent";
 import HeaderComponent from "@/components/layout/HeaderComponent";
 import PortfolioSectionComponent from "@/components/layout/PortfolioSectionComponent";
@@ -31,6 +32,7 @@ export default function RealisationsPage() {
           </div>
         </section>
         <PortfolioSectionComponent />
+        <CTAComponent />
       </div>
       <FooterComponent />
     </>

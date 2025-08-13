@@ -46,8 +46,8 @@ export default function TechnologieSections() {
     <section className="py-14 px-8 xs:px-10 sm:px-14 md:px-24 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 sm:mb-10">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl font-extrabold mb-3 sm:mb-4 text-white">
-            Technologies & Outils
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-3 sm:mb-4 text-white">
+            Technologies<br></br> & Outils
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-xs xs:text-sm sm:text-base">
             Les technologies que j'utilise quotidiennement pour créer des

@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import {
   Award,
+  Calendar,
   CheckCircle,
   Code2,
   GraduationCap,
@@ -22,9 +23,15 @@ export default function ParcoursFormationComponenent() {
     <section className="py-14 px-4 sm:px-8 md:px-16 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl text-black font-extrabold mb-4 flex items-center justify-center gap-2">
-            <Award className="w-8 h-8 text-orange-500" />
-            Parcours de formation
+          <Badge
+            variant="outline"
+            className="w-fit border-orange-500 text-black bg-white/80 mb-4 mx-auto text-xs sm:text-sm px-4 py-2 shadow-sm"
+          >
+            <Calendar className="w-3 h-3 mr-1" />
+            Disponible pour de nouveaux projets
+          </Badge>
+          <h2 className="text-3xl sm:text-4xl text-black font-extrabold mb-4 flex items-center justify-center gap-2">
+            Parcours de<br></br> formation
           </h2>
           <p className="text-gray-600 max-w-[95vw] sm:max-w-2xl mx-auto text-sm xs:text-base">
             Mon évolution du Bac STI2D vers l'ingénierie informatique, avec une

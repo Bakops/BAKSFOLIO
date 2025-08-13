@@ -1,7 +1,7 @@
 import { certifications } from "@/app/data/parcours-data";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Target } from "lucide-react";
+import { Target } from "lucide-react";
 import Image from "next/image";
 
 export default function CertificationsComponenent() {
@@ -9,11 +9,10 @@ export default function CertificationsComponenent() {
     <section className="py-14 px-8 xs:px-10 sm:px-14 md:px-24 bg-black text-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl text-white font-extrabold mb-4 flex items-center justify-center gap-2">
-            <Award className="w-8 h-8 text-orange-500" />
+          <h2 className="text-3xl sm:text-4xl text-white font-extrabold mb-4 flex items-center justify-center gap-2">
             Certifications
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-xs xs:text-sm sm:text-base">
+          <p className="text-gray-400 max-w-[95vw] sm:max-w-2xl mx-auto text-sm xs:text-base">
             Certifications professionnelles obtenues pour valider mes
             compétences techniques
           </p>

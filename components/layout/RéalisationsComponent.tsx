@@ -25,7 +25,6 @@ export default function RéalisationsComponent() {
   const [isMobile, setIsMobile] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Calcul du nombre de slides en fonction de l'écran
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -53,13 +52,12 @@ export default function RéalisationsComponent() {
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
-  // Projets visibles dans la slide actuelle
   const visibleProjects = isMobile
     ? [projects[slideIndex]]
     : projects.slice(slideIndex * 3, slideIndex * 3 + 3);
 
   return (
-    <section className="py-16 px-4 sm:px-8 md:px-16 bg-white">
+    <section className="py-14 px-8 xs:px-10 sm:px-14 md:px-24 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <Badge
