@@ -62,6 +62,7 @@ export const academicPath = [
     institution: "Lycée Brequigny",
     location: "Rennes, France",
     status: "Diplômé",
+
     certification: {
       title:
         "Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable",

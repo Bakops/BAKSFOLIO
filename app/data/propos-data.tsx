@@ -42,43 +42,107 @@ export const technologies = [
 
 export const formations = [
   {
-    title: "Licence DEVIA FULLSTACK",
-    institution: "EPSI Nantes",
     period: "2024 - 2025",
+    title: "Bachelor DevOps Fullstack",
+    level: "Bac+3, Bac+4 (Licence, Maîtrise)",
+    institution: "EPSI - L'école d'ingénierie informatique",
+    location: "Nantes, France",
     status: "En cours",
+    certification: {
+      title: "Développeur en Intelligence Artificielle et Data Science",
+      code: "RNCP36581",
+      type: "Certification RNCP",
+    },
     description:
-      "Formation complète en informatique avec spécialisation en développement web",
+      "Formation d'ingénierie informatique spécialisée en développement fullstack et DevOps avec certification en Intelligence Artificielle et Data Science",
+    highlights: [
+      "Développement en langages objet (Java, Python)",
+      "Frameworks modernes (Spring Boot, Angular, Django)",
+      "Technologies mobiles (Flutter) et backend (Nest.js)",
+      "Tests automatisés (unitaires, E2E, performance)",
+      "Méthodologies DevOps et intégration continue",
+      "Intelligence Artificielle et Data Science (RNCP36581)",
+    ],
+    domain: "Développement informatique",
+    projects: [
+      "Application fullstack de visualisation de données pandémiques (COVID-19/Monkeypox)",
+      "API REST avec tests automatisés complets",
+      "Application mobile Flutter",
+    ],
+    current: false,
+    imageUrl: "/epsi-logo.png",
   },
   {
-    title: "Bachelor chef de projet digital",
-    institution: "ESD - Ecole Supérieure du Digital",
-    period: "2023",
-    status: "Certifié",
+    period: "2022 - 2024",
+    title: "Bachelor Digital et Multimédia",
+    level: "Bac+2 (BTS, DUT)",
+    institution: "ESD - École Supérieure Du Digital",
+    location: "Nantes, France",
+    status: "Diplômé",
     description:
-      "Maîtrise approfondie de React et de l'écosystème moderne JavaScript",
+      "Formation complète en développement web et design numérique avec une approche créative et technique du digital",
+    highlights: [
+      "Développement web (HTML/CSS, JavaScript, SASS)",
+      "UX/UI Design et maquettage (Figma)",
+      "Gestion de contenu (WordPress, CMS)",
+      "Marketing digital et stratégies numériques",
+      "Containerisation avec Docker",
+    ],
+    domain: "Intégration informatique",
+    projects: [
+      "Sites web WordPress personnalisés",
+      "Développement HTML/CSS/JavaScript",
+      "Maquettes et prototypes sur Figma",
+    ],
+    current: false,
+    imageUrl: "/esd-logo.png",
   },
   {
-    title: "BAC STI2D OPTION SIN",
-    institution: "Lycée Brequigny",
     period: "2022",
-    status: "Complété",
-    description: "Principes de design d'interface et d'expérience utilisateur",
+    title:
+      "Baccalauréat STI2D OPTION SIN (Systèmes informatique et numériques)",
+    level: "Bac général et technologique",
+    institution: "Lycée Brequigny",
+    location: "Rennes, France",
+    status: "Diplômé",
+    certification: {
+      title:
+        "Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable",
+      code: "Diplôme National",
+      type: "Diplôme",
+    },
+    description:
+      "Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable avec spécialisation en systèmes numériques",
+    highlights: [
+      "Développement informatique (Arduino, HTML, CSS)",
+      "Sciences de l'Ingénieur",
+      "Introduction aux réseaux informatiques",
+      "Systèmes numériques (binaire, hexadécimal)",
+      "Programmation de microcontrôleurs Arduino",
+    ],
+    domain: "Développement informatique",
+    projects: [
+      "Projets Arduino avec capteurs et actionneurs",
+      "Sites web statiques en HTML/CSS",
+      "Systèmes embarqués et programmation",
+    ],
+    current: false,
+    imageUrl: "/logo-lycée-brequigny.png",
   },
 ];
 
 export const projects = [
   {
-    title: "Knowly App",
-    description: "Applications web de ventes de cours et de leçons en ligne",
-    tech: ["Next.js", "Reddis", "TailwindCSS", "Stripe"],
-    image: "/image-fond-app-knowly.PNG",
+    title: "Portfolio Créatif",
+    description: "Site portfolio personnel avec animations modernes",
+    tech: ["Next.js", "Framer Motion", "TailwindCSS"],
+    image: "/placeholder.svg?height=200&width=300",
   },
   {
-    title: "BiblioTech App",
-    description:
-      "Gestionnaire de livre en ligne avec système de prêt et de retour",
-    tech: ["Angular", "MySQL", "TailwindCSS"],
-    image: "/image-fond-app-bibliotech.png",
+    title: "Boutique Shopify",
+    description: "E-commerce personnalisé avec intégrations avancées",
+    tech: ["Shopify", "Liquid", "JavaScript"],
+    image: "/placeholder.svg?height=200&width=300",
   },
   {
     title: "Blog WordPress",

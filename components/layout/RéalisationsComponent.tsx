@@ -240,7 +240,6 @@ export default function RéalisationsComponent() {
             </div>
           </div>
 
-          {/* Indicateurs de slide */}
           <div className="flex justify-center mt-6 gap-2">
             {Array.from({ length: slidesCount }).map((_, index) => (
               <button
