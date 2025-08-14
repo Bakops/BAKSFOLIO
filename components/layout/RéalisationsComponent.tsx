@@ -1,5 +1,5 @@
 "use client";
-import { projects } from "@/app/data/realisation-data";
+import { categories, projects } from "@/app/data/realisation-data";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -92,7 +92,6 @@ export default function RéalisationsComponent() {
             <ChevronRight className="w-6 h-6 text-orange-500" />
           </button>
 
-          {/* Conteneur des slides */}
           <div className="overflow-hidden">
             <div
               className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-500 ${
@@ -161,11 +160,21 @@ export default function RéalisationsComponent() {
                       </div>
                     </div>
 
-                    {project.featured && (
-                      <Badge className="absolute top-4 left-4 bg-gradient-to-r from-orange-500 to-yellow-500">
-                        Phare
-                      </Badge>
-                    )}
+                    {project.featured &&
+                      (() => {
+                        const category = categories.find(
+                          (cat) => cat.id === project.category
+                        );
+                        if (!category) return null;
+                        return (
+                          <Badge
+                            className="absolute top-4 left-4 bg-opacity-80 text-white"
+                            style={{ backgroundColor: category.color }}
+                          >
+                            {category.name.toUpperCase()}
+                          </Badge>
+                        );
+                      })()}
                   </div>
 
                   <CardHeader>

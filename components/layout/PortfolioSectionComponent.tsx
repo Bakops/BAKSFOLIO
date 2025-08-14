@@ -146,11 +146,21 @@ export default function PortfolioSectionComponent() {
                   </div>
                 </div>
 
-                {project.featured && (
-                  <Badge className="absolute top-4 left-4 bg-gradient-to-r from-orange-500 to-yellow-500">
-                    Phare
-                  </Badge>
-                )}
+                {project.featured &&
+                  (() => {
+                    const category = categories.find(
+                      (cat) => cat.id === project.category
+                    );
+                    if (!category) return null;
+                    return (
+                      <Badge
+                        className="absolute top-4 left-4 bg-opacity-80 text-white"
+                        style={{ backgroundColor: category.color }}
+                      >
+                        {category.name.toUpperCase()}
+                      </Badge>
+                    );
+                  })()}
               </div>
 
               <CardHeader>
