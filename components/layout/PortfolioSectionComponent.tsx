@@ -14,15 +14,16 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function PortfolioSectionComponent() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("tout");
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProjects = projects.filter((project) => {
     const matchesCategory =
-      selectedCategory === "all" || project.category === selectedCategory;
+      selectedCategory === "tout" || project.category === selectedCategory;
     const matchesSearch =
       project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.description.toLowerCase().includes(searchTerm.toLowerCase());
+
     return matchesCategory && matchesSearch;
   });
 
@@ -166,9 +167,6 @@ export default function PortfolioSectionComponent() {
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
                   <Badge variant="outline">{project.year}</Badge>
-                  <span className="text-xs text-muted-foreground">
-                    {project.duration}
-                  </span>
                 </div>
                 <CardTitle className="group-hover:text-orange-500 transition-colors">
                   {project.title}
