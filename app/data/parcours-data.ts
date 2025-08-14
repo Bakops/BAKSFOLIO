@@ -2,7 +2,7 @@ export const academicPath = [
   {
     period: "2024 - 2025",
     title: "Bachelor DevOps Fullstack",
-    level: "Bac+3, Bac+4 (Licence, Maîtrise)",
+    level: "Bac+3 (Licence)",
     institution: "EPSI - L'école d'ingénierie informatique",
     location: "Nantes, France",
     status: "En cours",
@@ -57,7 +57,7 @@ export const academicPath = [
   },
   {
     period: "2022",
-    title: "Baccalauréat STI2D",
+    title: "Bac STI2D OPTION SIN (Systèmes informatique et numériques)",
     level: "Bac général et technologique",
     institution: "Lycée Brequigny",
     location: "Rennes, France",

@@ -209,7 +209,7 @@ export default function PortfolioSectionComponent() {
                         }}
                       >
                         <Globe className="w-3 h-3 mr-1" />
-                        Live
+                        En ligne
                       </Button>
                     )}
                     {project.githubUrl && project.githubUrl !== "#" && (

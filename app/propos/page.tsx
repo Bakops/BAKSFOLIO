@@ -1,3 +1,4 @@
+"use client";
 import CTAComponent from "@/components/layout/CTAComponent";
 import FooterComponent from "@/components/layout/FooterComponent";
 import FormationsSectionsComponent from "@/components/layout/FormationsSectionsComponent";
@@ -6,6 +7,7 @@ import PresentationSectionsComponent from "@/components/layout/PresentationSecti
 import RéalisationsComponent from "@/components/layout/RéalisationsComponent";
 import TechnologieSections from "@/components/layout/TechnologieSections";
 import { Badge } from "@/components/ui/badge";
+import CursorGsap from "@/components/ui/CursorGsap";
 import { Award } from "lucide-react";
 
 export default function AboutPage() {
@@ -39,6 +41,7 @@ export default function AboutPage() {
         <CTAComponent />
       </div>
       <FooterComponent />
+      <CursorGsap />
     </>
   );
 }

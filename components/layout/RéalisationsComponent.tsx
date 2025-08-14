@@ -77,7 +77,6 @@ export default function RéalisationsComponent() {
         </div>
 
         <div className="relative">
-          {/* Boutons de navigation */}
           <button
             onClick={prevSlide}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white/80 p-2 rounded-full shadow-md hover:bg-white z-10"
@@ -101,7 +100,7 @@ export default function RéalisationsComponent() {
               {visibleProjects.map((project, index) => (
                 <Card
                   key={`${slideIndex}-${index}`}
-                  className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                   onClick={() => {
                     if (project.liveUrl && project.liveUrl !== "#") {
                       window.open(project.liveUrl, "_blank");
@@ -224,7 +223,7 @@ export default function RéalisationsComponent() {
                             }}
                           >
                             <Globe className="w-3 h-3 mr-1" />
-                            Live
+                            En ligne
                           </Button>
                         )}
                         {project.githubUrl && project.githubUrl !== "#" && (

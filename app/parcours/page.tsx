@@ -1,9 +1,11 @@
+"use client";
 import CertificationsComponenent from "@/components/layout/CertificationsComponenent";
 import CTAComponent from "@/components/layout/CTAComponent";
 import FooterComponent from "@/components/layout/FooterComponent";
 import HeaderComponent from "@/components/layout/HeaderComponent";
 import ParcoursFormationComponenent from "@/components/layout/ParcoursFormationComponenent";
 import { Badge } from "@/components/ui/badge";
+import CursorGsap from "@/components/ui/CursorGsap";
 import { GraduationCap } from "lucide-react";
 
 export default function Parcours() {
@@ -38,6 +40,7 @@ export default function Parcours() {
         <CTAComponent />
         <FooterComponent />
       </div>
+      <CursorGsap />
     </>
   );
 }

@@ -5,6 +5,7 @@ import FooterComponent from "@/components/layout/FooterComponent";
 import HeaderComponent from "@/components/layout/HeaderComponent";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import CursorGsap from "@/components/ui/CursorGsap";
 import { Calendar, Mail, MessageSquare } from "lucide-react";
 
 export default function ContactPage() {
@@ -56,6 +57,7 @@ export default function ContactPage() {
         <ContactSectionComponent />
         <FooterComponent />
       </div>
+      <CursorGsap />
     </>
   );
 }

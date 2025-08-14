@@ -1,6 +1,6 @@
 "use client";
 import { ScrollBasedVelocityDemo } from "@/components/layout/animescroll";
-import CTAComponent from "@/components/layout/CTAComponent";
+import CTABlackComponent from "@/components/layout/CTABlackComponent";
 import FooterComponent from "@/components/layout/FooterComponent";
 import HeroHeadersComponent from "@/components/layout/HeroHeadersComponent";
 import RéalisationsComponent from "@/components/layout/RéalisationsComponent";
@@ -18,7 +18,7 @@ export default function Home() {
       <Feature />
       <TechnologieSections />
       <RéalisationsComponent />
-      <CTAComponent />
+      <CTABlackComponent />
       <FooterComponent />
       <CursorGsap />
     </>

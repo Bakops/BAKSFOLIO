@@ -1,11 +1,11 @@
 "use client";
-import CTAComponent from "@/components/layout/CTAComponent";
+import CTABlackComponent from "@/components/layout/CTABlackComponent";
 import FooterComponent from "@/components/layout/FooterComponent";
 import HeaderComponent from "@/components/layout/HeaderComponent";
 import PortfolioSectionComponent from "@/components/layout/PortfolioSectionComponent";
 import { Badge } from "@/components/ui/badge";
+import CursorGsap from "@/components/ui/CursorGsap";
 import { Award } from "lucide-react";
-
 export default function RealisationsPage() {
   return (
     <>
@@ -32,9 +32,10 @@ export default function RealisationsPage() {
           </div>
         </section>
         <PortfolioSectionComponent />
-        <CTAComponent />
+        <CTABlackComponent />
       </div>
       <FooterComponent />
+      <CursorGsap />
     </>
   );
 }
