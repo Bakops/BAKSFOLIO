@@ -34,7 +34,7 @@ export default function ContactPage() {
               je peux vous aider à concrétiser vos idées.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white transition-all hover:shadow-lg active:scale-95"
@@ -46,7 +46,7 @@ export default function ContactPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-orange-50 bg-transparent transition-all hover:shadow-lg active:scale-95"
+                  className="border-white text-white hover:bg-orange-50 bg-transparent transition-all hover:shadow-lg active:scale-95 w-full sm:w-auto"
                 >
                   <Mail className="w-4 h-4 mr-2" />
                   Envoyer un email

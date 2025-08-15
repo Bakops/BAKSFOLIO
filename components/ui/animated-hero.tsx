@@ -74,7 +74,7 @@ function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto border-white text-white hover:bg-white/10 hover:border-orange-400 bg-transparent transition-all hover:shadow-lg active:scale-95"
+                className="w-full sm:w-auto border-white text-white hover:bg-white/10 hover:border-orange-400 hover:text-white bg-transparent transition-all hover:shadow-lg active:scale-95"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Envoyer un email
