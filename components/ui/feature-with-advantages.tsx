@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function Feature() {
   return (
-    <section className="w-full py-14 px-8 xs:px-10 sm:px-14 md:px-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="w-full my-10 sm:my-16 md:my-20 py-12 px-8 xs:px-10 sm:px-14 md:px-24 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-full mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,18 +12,15 @@ function Feature() {
           viewport={{ once: true }}
           className="flex flex-col gap-8 items-start"
         >
-          <Badge
-            variant="outline"
-            className="bg-orange-50 text-orange-600 border-orange-200 hover:bg-orange-100"
-          >
+          <Badge variant="outline" className="bg-black text-white">
             Développement Fullstack
           </Badge>
 
           <div className="flex flex-col gap-4 w-full">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 tracking-tight">
               Développeur nocturne - Du concept au déploiement !
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-4xl">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-4xl">
               Étudiant passionné en développement fullstack, je conçois des
               applications web modernes, performantes et évolutives, du
               front-end au back-end. Je réalise également des sites WordPress
