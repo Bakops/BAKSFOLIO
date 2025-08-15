@@ -1,24 +1,18 @@
-import { Clock, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 export const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "contact@baktoure.dev",
+    value: "bakoutoure4@gmail.com",
     description: "Réponse sous 24h",
-    action: "mailto:contact@baktoure.dev",
+    action: "mailto:bakoutoure4@gmail.com",
   },
-  {
-    icon: Phone,
-    title: "Téléphone",
-    value: "+33 6 XX XX XX XX",
-    description: "Lun-Ven 9h-18h",
-    action: "tel:+33600000000",
-  },
+
   {
     icon: MapPin,
     title: "Localisation",
-    value: "Paris, France",
+    value: "Nantes, France",
     description: "Disponible en remote",
     action: "#",
   },

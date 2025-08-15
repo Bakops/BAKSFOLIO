@@ -37,7 +37,7 @@ export default function PortfolioSectionComponent() {
             className="w-fit border-orange-500 text-black bg-white/80 mb-4 mx-auto text-xs sm:text-sm px-4 py-2 shadow-sm"
           >
             <Calendar className="w-3 h-3 mr-1" />
-            Disponible pour de nouveaux projets
+            Portfolio & Réalisations
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
             Tous mes projets

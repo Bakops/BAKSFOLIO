@@ -10,7 +10,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
-  Calendar,
   ChevronLeft,
   ChevronRight,
   Github,
@@ -64,8 +63,8 @@ export default function RéalisationsComponent() {
             variant="outline"
             className="w-fit border-orange-500 text-black bg-white/80 mb-4 mx-auto text-xs sm:text-sm px-4 py-2 shadow-sm"
           >
-            <Calendar className="w-3 h-3 mr-1" />
-            Disponible pour de nouveaux projets
+            <PenIcon className="w-3 h-3 mr-1" />
+            Un aperçus de mes réalisations
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-black tracking-tight">
             Aperçu de mes réalisations

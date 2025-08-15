@@ -9,12 +9,12 @@ import {
 } from "@/components/ui/card";
 import {
   Award,
-  Calendar,
   CheckCircle,
   Code2,
   GraduationCap,
   MapPin,
   Target,
+  UniversityIcon,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -27,8 +27,8 @@ export default function ParcoursFormationComponenent() {
             variant="outline"
             className="w-fit border-orange-500 text-black bg-white/80 mb-4 mx-auto text-xs sm:text-sm px-4 py-2 shadow-sm"
           >
-            <Calendar className="w-3 h-3 mr-1" />
-            Disponible pour de nouveaux projets
+            <UniversityIcon className="w-3 h-3 mr-1" />
+            Découvrez mon parcours académique
           </Badge>
           <h2 className="text-3xl sm:text-4xl text-black font-extrabold mb-4 flex items-center justify-center gap-2">
             Parcours de<br></br> formation

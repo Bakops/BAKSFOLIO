@@ -293,4 +293,17 @@ export const projects = [
     featured: true,
     githubUrl: "https://github.com/Bakops/Lingualink-App",
   },
+  {
+    id: 21,
+    title: "Modèle XGBoost",
+    description: "Modèle de prédiction d'évolutions de pandémies avec XGBoost",
+    category: "ai",
+    image: "/xgboost.PNG",
+    technologies: ["Collab", "Python", "Ngrok"],
+    year: "2025",
+    client: "Projet EPSI",
+    featured: true,
+    liveUrl:
+      "https://colab.research.google.com/drive/1GM08lgxsYDcvWnj8lc1wIzUWq55vW-v4?usp=sharing",
+  },
 ];
