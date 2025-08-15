@@ -63,14 +63,16 @@ export default function CTABlackComponent() {
             </Button>
           </Link>
 
-          <Button
-            size="lg"
-            variant="outline"
-            className="w-full sm:w-auto text-white border-white hover:border-orange-500 hover:text-orange-500 bg-black/50 transition-all hover:shadow-lg hover:shadow-white/10 active:scale-95"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Télécharger mon CV
-          </Button>
+          <a href="/Toure-Bakou-CV.pdf" download className="w-full sm:w-auto">
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto text-white border-white hover:border-orange-500 hover:text-orange-500 bg-black/50 transition-all hover:shadow-lg hover:shadow-white/10 active:scale-95"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              Télécharger mon CV
+            </Button>
+          </a>
         </motion.div>
       </div>
     </motion.section>

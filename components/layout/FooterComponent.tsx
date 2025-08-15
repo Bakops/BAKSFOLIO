@@ -50,18 +50,15 @@ export default function FooterComponent() {
           <div className="space-y-4">
             <h3 className="font-semibold text-white">Réalisations</h3>
             <ul className="flex flex-col gap-3">
-              {[
-                "Développement Web",
-                "UI/UX Design",
-                "Applications Mobile",
-                "Consultation",
-              ].map((service) => (
-                <li key={service}>
-                  <span className="text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm">
-                    <a href="/realisations">{service}</a>
-                  </span>
-                </li>
-              ))}
+              {["Sites Web", "UI/UX Design", "Web Apps", "APIs"].map(
+                (service) => (
+                  <li key={service}>
+                    <span className="text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 hover:bg-clip-text hover:text-transparent transition-colors font-medium text-sm">
+                      <a href="/realisations">{service}</a>
+                    </span>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
@@ -113,7 +110,7 @@ export default function FooterComponent() {
 
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-            <p>© 2024 Bakou Touré. Tous droits réservés.</p>
+            <p>© 2024 Baks.DEV. Tous droits réservés.</p>
           </div>
         </div>
       </div>

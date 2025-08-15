@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function Feature() {
   return (
-    <section className="w-full my-10 sm:my-16 md:my-20 py-12 px-8 xs:px-10 sm:px-14 md:px-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="w-full my-10 sm:my-16 md:my-20 py-12 px-8 xs:px-10 sm:px-14 md:px-24 ">
       <div className="max-w-full mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
