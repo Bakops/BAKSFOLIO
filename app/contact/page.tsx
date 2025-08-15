@@ -37,19 +37,21 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white shadow-lg"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white transition-all hover:shadow-lg active:scale-95"
               >
                 <Calendar className="w-4 h-4 mr-2" />
                 Planifier un appel
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-orange-50 bg-transparent"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Envoyer un email
-              </Button>
+              <a href="mailto:bakoutoure4@gmail.com">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-orange-50 bg-transparent transition-all hover:shadow-lg active:scale-95"
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Envoyer un email
+                </Button>
+              </a>
             </div>
           </div>
         </section>
