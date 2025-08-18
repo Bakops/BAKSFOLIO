@@ -35,13 +35,16 @@ export default function ContactPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white transition-all hover:shadow-lg active:scale-95"
-              >
-                <Calendar className="w-4 h-4 mr-2" />
-                Planifier un appel
-              </Button>
+              <a href="https://cal.com/bakou-toure/30min">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white transition-all hover:shadow-lg active:scale-95"
+                >
+                  <Calendar className="w-4 h-4 mr-2" />
+                  Planifier un appel
+                </Button>
+              </a>
+
               <a href="mailto:bakoutoure4@gmail.com">
                 <Button
                   size="lg"
