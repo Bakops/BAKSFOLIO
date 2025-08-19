@@ -21,6 +21,19 @@ export const categories = [
 export const projects = [
   {
     id: 1,
+    title: "MaokoShop App",
+    description: "Application web de vente de vêtements et accessoires",
+    category: "webapp",
+    image: "/Mahoko-shop.PNG",
+    technologies: ["Angular", "TypeScript", "CSS", "Tailwind"],
+    year: "2024",
+    client: "Projet personnel",
+    featured: true,
+    githubUrl: "https://github.com/Bakops/MaokoAPP",
+    liveUrl: "https://mahoko-shop.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Knowly App",
     description: "Applications web de ventes de cours et de leçons en ligne",
     category: "webapp",
@@ -33,7 +46,7 @@ export const projects = [
     githubUrl: "https://github.com/Bakops/Knowly-App-Front-NEXT",
   },
   {
-    id: 2,
+    id: 3,
     title: "Bibliotech",
     description:
       "Applications web de gestions de livres et de cathégories en ligne ",
@@ -47,7 +60,7 @@ export const projects = [
     githubUrl: "https://github.com/Bakops/epsi-tp-01-ANGULAR",
   },
   {
-    id: 3,
+    id: 4,
     title: "Matisse Photographe",
     description:
       "Site vitrine pour un photographe professionnel Nantais avec portfolio",
@@ -60,7 +73,7 @@ export const projects = [
     liveUrl: "https://matissecoquilphotographe.fr/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Epiviz App",
     description:
       "Dashboard de visualisation de données épidémiologiques de COVID19/MPOX",
@@ -81,7 +94,7 @@ export const projects = [
     githubUrl: "https://github.com/Bakops/EpiVIZ",
   },
   {
-    id: 5,
+    id: 6,
     title: "Maquette Matisse Photographe",
     description:
       "Maquette Figma de site vitrine pour un photographe professionnel Nantais",
@@ -95,7 +108,7 @@ export const projects = [
       "https://www.figma.com/design/0F7QurtBeReOnbfUF3Pv3a/MATISSE-PHOTOGRAPHE?node-id=2101-1186&t=e2bwcv5zcKbGSCRc-1",
   },
   {
-    id: 6,
+    id: 7,
     title: "Refonte site Leffe",
     description:
       "Refonte du site vitrine de la bière Leffe avec animations et design moderne",
@@ -109,7 +122,7 @@ export const projects = [
       "https://www.figma.com/design/AHNVvYillWHUD8hL9TTkKc/LEFFE?node-id=0-1&t=YFD08OvnbZytXPj8-1",
   },
   {
-    id: 7,
+    id: 8,
     title: "Maquette AVX Shop",
     description: "Maquette Figma d'une boutique en ligne de bonbons au CBD",
     category: "design",
@@ -122,7 +135,7 @@ export const projects = [
       "https://www.figma.com/design/x8d8GIo0SatUc25tiVoyYN/AVX?t=YFD08OvnbZytXPj8-1",
   },
   {
-    id: 8,
+    id: 9,
     title: "Maquette Workshop MYDIL",
     description:
       "Mauquette Figma d'une webapp pour un solution d'emprunt de materielles",
@@ -136,7 +149,7 @@ export const projects = [
       "https://www.figma.com/design/OHLhpoWhERbLM30g87q9CY/WORKSHOP-MYDIL?t=YFD08OvnbZytXPj8-1",
   },
   {
-    id: 9,
+    id: 10,
     title: "Maquette Appelle détresse",
     description:
       "Refont d'un site d'une associations caritative pour les pays en voie de développement",
@@ -150,7 +163,7 @@ export const projects = [
       "https://www.figma.com/design/YDee4Ow6X12vtgok4so0Em/COMP%C3%89TITION?node-id=0-1&t=YFD08OvnbZytXPj8-1",
   },
   {
-    id: 10,
+    id: 11,
     title: "Maquette EcoGarden",
     description:
       "Maquette Figma d'un site vitrine pour un projet de jardin écologique",
@@ -164,7 +177,7 @@ export const projects = [
       "https://www.figma.com/design/cjPITWnvgoUQUvO2ZxQU3T/ECOGARDEN?node-id=0-1&t=5n5tzrQzy8r1DT2a-1",
   },
   {
-    id: 11,
+    id: 12,
     title: "Maquette Paulette & Léon",
     description:
       "Refonte d'un site e-commerce de vente de broderies personnalisées",
@@ -178,7 +191,7 @@ export const projects = [
       "https://www.figma.com/design/dEyAp3iDB2tpDpUHJJsE2o/PAULETTE-LEON-REFONTE?node-id=0-1&t=azvkFn5d4s7HGUmQ-1",
   },
   {
-    id: 12,
+    id: 13,
     title: "Maquette Edelweiss",
     description: "Refonte d'un site vitrine pour une restaurant rennais",
     category: "design",
@@ -191,7 +204,7 @@ export const projects = [
       "https://www.figma.com/design/6su36CvfHslQPWdslcw3h3/EdelWeiss-REFONTE?node-id=0-1&t=W1GUcnQbngozIpHk-1",
   },
   {
-    id: 13,
+    id: 14,
     title: "API XGBoost",
     description:
       "Api de prédiction d'écolutions des pandémies COVID19/MPOX avec le modèle XGBoost",
@@ -204,7 +217,7 @@ export const projects = [
     githubUrl: "https://github.com/Bakops/API-XGBOOST",
   },
   {
-    id: 14,
+    id: 15,
     title: "Cabinet Tambado App",
     description: "Application web d'un cabinet de service à la personne",
     category: "webapp",
@@ -215,19 +228,6 @@ export const projects = [
     featured: true,
     githubUrl: "https://github.com/Bakops/site-maitre-tambado-normandie",
     liveUrl: "https://site-maitre-tambado.vercel.app/",
-  },
-  {
-    id: 15,
-    title: "MaokoShop App",
-    description: "Application web de vente de vêtements et accessoires",
-    category: "webapp",
-    image: "/Mahoko-shop.PNG",
-    technologies: ["Angular", "TypeScript", "CSS", "Tailwind"],
-    year: "2024",
-    client: "Projet personnel",
-    featured: true,
-    githubUrl: "https://github.com/Bakops/MaokoAPP",
-    liveUrl: "https://mahoko-shop.vercel.app/",
   },
   {
     id: 16,
