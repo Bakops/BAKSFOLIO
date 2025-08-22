@@ -38,7 +38,7 @@ export default function ContactPage() {
               <a href="https://cal.com/bakou-toure/30min">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white transition-all hover:shadow-lg active:scale-95"
+                  className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white transition-all hover:shadow-lg active:scale-95 w-full sm:w-auto"
                 >
                   <Calendar className="w-4 h-4 mr-2" />
                   Planifier un appel
