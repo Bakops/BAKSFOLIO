@@ -310,7 +310,7 @@ export const projects = [
     id: 22,
     title: "Maquette Troc&vous",
     description: "Modèle de prédiction d'évolutions de pandémies avec XGBoost",
-    category: "ai",
+    category: "design",
     image: "/image-maquette-troc-&-vous.PNG",
     technologies: ["Figma", "Solar Icon", "Iconify"],
     year: "2025",
