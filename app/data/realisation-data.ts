@@ -306,4 +306,17 @@ export const projects = [
     liveUrl:
       "https://colab.research.google.com/drive/1GM08lgxsYDcvWnj8lc1wIzUWq55vW-v4?usp=sharing",
   },
+  {
+    id: 22,
+    title: "Maquette Troc&vous",
+    description: "Modèle de prédiction d'évolutions de pandémies avec XGBoost",
+    category: "ai",
+    image: "/image-maquette-troc-&-vous.PNG",
+    technologies: ["Figma", "Solar Icon", "Iconify"],
+    year: "2025",
+    client: "Projet Personnel",
+    featured: true,
+    liveUrl:
+      "https://www.figma.com/design/c92lgTNoUYZO16CgRXgB53/TrocEtVous-PROJET?node-id=0-1&t=SE26zSTy8YcBJodX-1",
+  },
 ];
