@@ -56,8 +56,8 @@ export const projects = [
     year: "2025",
     client: "Projet EPSI",
     featured: true,
-    liveUrl: "https://epsi-tp-01-angular-seven.vercel.app/",
-    githubUrl: "https://github.com/Bakops/epsi-tp-01-ANGULAR",
+    liveUrl: "https://bibliotech-learn.vercel.app/",
+    githubUrl: "https://github.com/Bakops/BiblioTech",
   },
   {
     id: 4,

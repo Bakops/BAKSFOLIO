@@ -31,11 +31,7 @@ export default function CTABlackComponent() {
             </Button>
           </Link>
 
-          <a
-            href="/Toure-Bakou-Étudiant Développeur Fullstack.pdf"
-            download
-            className="w-full sm:w-auto"
-          >
+          <a href="/CV.pdf" download className="w-full sm:w-auto">
             <Button
               size="lg"
               variant="outline"
