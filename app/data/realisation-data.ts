@@ -9,11 +9,11 @@ import {
 
 export const categories = [
   { id: "tout", name: "Tous les projets", icon: Globe, color: "#FF6347" },
+  { id: "webapp", name: "Web App", icon: Code2, color: "#9C27B0" },
+  { id: "design", name: "UI/UX", icon: Palette, color: "#E91E63" },
   { id: "site web", name: "Site web", icon: ShoppingCart, color: "#4CAF50" },
   { id: "blockchain", name: "Blockchain", icon: Code2, color: "#2196F3" },
-  { id: "webapp", name: "Web App", icon: Code2, color: "#9C27B0" },
   { id: "mobile", name: "Mobile", icon: Smartphone, color: "#FF9800" },
-  { id: "design", name: "UI/UX", icon: Palette, color: "#E91E63" },
   { id: "api", name: "API", icon: Code2, color: "#3F51B5" },
   { id: "ai", name: "Modèle IA", icon: Zap, color: "#FF5722" },
 ];
@@ -318,5 +318,18 @@ export const projects = [
     featured: true,
     liveUrl:
       "https://www.figma.com/design/c92lgTNoUYZO16CgRXgB53/TrocEtVous-PROJET?node-id=0-1&t=SE26zSTy8YcBJodX-1",
+  },
+  {
+    id: 23,
+    title: "Troc&vous",
+    description: "Platforme de troc d'objets entre particuliers",
+    category: "webapp",
+    image: "/image trocvous.PNG",
+    technologies: ["Angular", "TypeScript", "CSS", "Tailwind"],
+    year: "2025",
+    client: "Projet Personnel",
+    featured: true,
+    liveUrl: "https://troc-vous.vercel.app/",
+    githubUrl: "https://github.com/Bakops/Troc-Vous",
   },
 ];
