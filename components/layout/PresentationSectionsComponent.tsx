@@ -27,24 +27,40 @@ export default function PresentationSectionsComponent() {
                   <span className="font-semibold text-orange-400">
                     Bakou Touré
                   </span>
-                  , étudiant passionné et développeur Fullstack basé à Rennes.
+                  , développeur Fullstack basé à Rennes et passionné par la
+                  création d’applications web performantes et intuitives.
                 </p>
                 <p>
-                  J'aime concevoir des interfaces modernes, dynamiques et
-                  accessibles qui offrent une expérience utilisateur
-                  exceptionnelle.
+                  J’aime concevoir et développer des solutions complètes, du
+                  design d’interfaces modernes et ergonomiques jusqu’à la mise
+                  en place d’architectures solides côté serveur et base de
+                  données.
                 </p>
                 <p>
-                  J'utilise principalement{" "}
+                  J’utilise principalement{" "}
                   <span className="font-medium text-orange-300">
-                    React, Next.js, TailwindCSS
+                    React, Angular, Node.js
                   </span>{" "}
-                  et d'autres outils du web moderne pour créer des expériences
-                  uniques.
+                  et{" "}
+                  <span className="font-medium text-orange-300">
+                    Java Spring Boot
+                  </span>{" "}
+                  pour le développement web, avec{" "}
+                  <span className="font-medium text-orange-300">
+                    TailwindCSS
+                  </span>{" "}
+                  pour le style et des bases de données comme{" "}
+                  <span className="font-medium text-orange-300">MySQL</span> ou{" "}
+                  <span className="font-medium text-orange-300">
+                    PostgreSQL
+                  </span>{" "}
+                  pour la gestion des données.
                 </p>
                 <p>
-                  Toujours curieux, j'apprends en continu pour rester à la
-                  pointe des technologies.
+                  Curieux et en constante évolution, je cherche toujours à
+                  approfondir mes connaissances en conception d’API, déploiement
+                  cloud et bonnes pratiques DevOps afin de proposer des projets
+                  à la fois robustes et évolutifs.
                 </p>
               </div>
             </div>
@@ -90,9 +106,9 @@ export default function PresentationSectionsComponent() {
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-3xl blur-xl opacity-30 animate-pulse" />
               <div className="relative bg-gradient-to-r from-orange-500 to-yellow-500 p-1 rounded-3xl">
-                <div className="bg-[#101010] rounded-3xl p-2">
+                <div className="rounded-3xl p-2">
                   <Image
-                    src="/photos bakou.JPG"
+                    src="/photos bakou 2.jpeg"
                     alt="Bakou Touré"
                     width={320}
                     height={400}
