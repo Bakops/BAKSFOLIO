@@ -332,4 +332,16 @@ export const projects = [
     liveUrl: "https://troc-vous.vercel.app/",
     githubUrl: "https://github.com/Bakops/Troc-Vous",
   },
+  {
+    id: 24,
+    title: "PartAnt",
+    description: "Application mobile de réservation de bars nantais",
+    category: "mobile",
+    image: "/image partant.PNG",
+    technologies: ["Expo", "TypeScript", "CSS", "React Native"],
+    year: "2026",
+    client: "Projet Personnel",
+    featured: true,
+    githubUrl: "https://github.com/PartAnt/Part-ANT-Frontend",
+  },
 ];
